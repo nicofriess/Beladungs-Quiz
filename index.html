@@ -892,6 +892,36 @@ const BELADEPLAN_LF10 = {
               "position": "mitte"
             }
           ]
+        },
+        {
+          "bereich": "Drehfach außen",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Halligan-Tool",
+              "position": "mitte"
+            },
+            {
+              "menge": 1,
+              "name": "Spaltaxt",
+              "position": "mitte"
+            },
+            {
+              "menge": 2,
+              "name": "Feuerwehraxt",
+              "position": "mitte"
+            },
+            {
+              "menge": 1,
+              "name": "Bolzenschneider",
+              "position": "mitte"
+            },
+            {
+              "menge": 1,
+              "name": "Abgasschlauch Stromerzeuger",
+              "position": "mitte"
+            }
+          ]
         }
       ]
     },
@@ -1244,32 +1274,6 @@ const BELADEPLAN_LF10 = {
     }
   ],
   "sonstige_bereiche": [
-    {
-      "id": "drehfach-aussen",
-      "name": "Drehfach außen",
-      "gegenstaende": [
-        {
-          "menge": 1,
-          "name": "Halligan-Tool"
-        },
-        {
-          "menge": 1,
-          "name": "Spaltaxt"
-        },
-        {
-          "menge": 2,
-          "name": "Feuerwehraxt"
-        },
-        {
-          "menge": 1,
-          "name": "Bolzenschneider"
-        },
-        {
-          "menge": 1,
-          "name": "Abgasschlauch Stromerzeuger"
-        }
-      ]
-    },
     {
       "id": "fahrerraum",
       "name": "Fahrerraum",
@@ -1725,9 +1729,9 @@ const BELADEPLAN_LF10 = {
       id: 'beifahrerseite', label: 'Beifahrerseite',
       imgClosed: 'assets/beifahrerseite-zu.jpg', imgOpen: 'assets/beifahrerseite-auf.jpg',
       zones: [
-        { id: 'raum6', label: 'G6', rect: [9, 28, 15, 44], revealRect: [2, 20, 28, 60] },
-        { id: 'raum4', label: 'G4', rect: [24, 28, 23, 29], revealRect: [30, 20, 30, 60] },
-        { id: 'raum2', label: 'G2', rect: [47, 28, 15, 44], revealRect: [60, 20, 33, 60] }
+        { id: 'raum6', label: 'G6', rect: [9, 28, 12, 44], revealRect: [2, 20, 28, 60] },
+        { id: 'raum4', label: 'G4', rect: [21, 28, 17, 30], revealRect: [30, 20, 30, 60] },
+        { id: 'raum2', label: 'G2', rect: [38, 28, 18, 44], revealRect: [60, 20, 33, 60] }
       ]
     },
     {
@@ -1747,7 +1751,6 @@ const BELADEPLAN_LF10 = {
 
   var CARD_ZONES = [
     { id: 'fahrerraum', label: 'Fahrerraum' },
-    { id: 'drehfach-aussen', label: 'Drehfach außen' },
     { id: 'dachbeladung', label: 'Dachbeladung' },
     { id: 'dachkasten', label: 'Dachkasten' }
   ];
