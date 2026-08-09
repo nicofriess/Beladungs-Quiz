@@ -349,6 +349,13 @@
   .drop-zone.correct { background: color-mix(in srgb, var(--good) 30%, transparent); border-color: var(--good); }
   .drop-zone.wrong { background: color-mix(in srgb, var(--warn) 30%, transparent); border-color: var(--warn); }
   .drop-zone.reveal { background: color-mix(in srgb, var(--good) 22%, transparent); border-color: var(--good); border-style: solid; }
+  .reveal-circle {
+    position: absolute;
+    border: 4px solid var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 40%, transparent);
+    pointer-events: none;
+  }
   .zone-label {
     position: absolute;
     left: 4px;
@@ -613,19 +620,23 @@ const BELADEPLAN_LF10 = {
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Schneidgerät Weber"
+              "name": "Schneidgerät Weber",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Spreizer Weber"
+              "name": "Spreizer Weber",
+              "position": "unten"
             },
             {
               "menge": 4,
-              "name": "Stab-Pack"
+              "name": "Stab-Pack",
+              "position": "unten"
             },
             {
               "menge": 3,
-              "name": "Mulde"
+              "name": "Mulde",
+              "position": "unten"
             }
           ]
         },
@@ -634,71 +645,88 @@ const BELADEPLAN_LF10 = {
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Standrohr BW"
+              "name": "Standrohr BW",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Korbtrage mit Fahrwerk"
+              "name": "Korbtrage mit Fahrwerk",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Schaufeltrage mit Kopf-Fixier-Set"
+              "name": "Schaufeltrage mit Kopf-Fixier-Set",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Abseilspinne"
+              "name": "Abseilspinne",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Leerkiste (600x400x220)"
+              "name": "Leerkiste (600x400x220)",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Standrohr"
+              "name": "Standrohr",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Standrohrhalter"
+              "name": "Standrohrhalter",
+              "position": "mitte"
             },
             {
               "menge": 2,
-              "name": "Überflurhydrantenschlüssel"
+              "name": "Überflurhydrantenschlüssel",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Unterflurhydrantenschlüssel BW"
+              "name": "Unterflurhydrantenschlüssel BW",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Paar Schachthaken"
+              "name": "Paar Schachthaken",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Zubehörtasche PAX Spineboard"
+              "name": "Zubehörtasche PAX Spineboard",
+              "position": "mitte"
             },
             {
               "menge": 2,
-              "name": "Leitungsroller 230V"
+              "name": "Leitungsroller 230V",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Zubehör Rettungsgerät"
+              "name": "Zubehör Rettungsgerät",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Stab-Fast"
+              "name": "Stab-Fast",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Handwerkzeug"
+              "name": "Handwerkzeug",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Verkehrsunfallsatz"
+              "name": "Verkehrsunfallsatz",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Kasten permanente Stromversorgung"
+              "name": "Kasten permanente Stromversorgung",
+              "position": "unten"
             }
           ]
         }
@@ -713,7 +741,8 @@ const BELADEPLAN_LF10 = {
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Stromerzeuger 9 kVA"
+              "name": "Stromerzeuger 9 kVA",
+              "position": "unten"
             }
           ]
         },
@@ -722,76 +751,94 @@ const BELADEPLAN_LF10 = {
           "gegenstaende": [
             {
               "menge": 2,
-              "name": "Waldarbeiter-Latzhose"
+              "name": "Waldarbeiter-Latzhose",
+              "position": "oben"
             },
             {
               "menge": 2,
-              "name": "Waldarbeiter-Schutzhelm"
+              "name": "Waldarbeiter-Schutzhelm",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Personenschutzleitung PRCD"
+              "name": "Personenschutzleitung PRCD",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Kiste Umwelt (600x400x320)"
+              "name": "Kiste Umwelt (600x400x320)",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Notfallwanne"
+              "name": "Notfallwanne",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Unterlegplane"
+              "name": "Unterlegplane",
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Schadstoffdeckung",
-              "unsicher": true
+              "unsicher": true,
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Beleuchtungseinheit Meister LED"
+              "name": "Beleuchtungseinheit Meister LED",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Beleuchtungseinheit mit Zubehör Weber LED"
+              "name": "Beleuchtungseinheit mit Zubehör Weber LED",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Stativ"
+              "name": "Stativ",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Motorsäge mit Zubehör"
+              "name": "Motorsäge mit Zubehör",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Doppelkanister"
+              "name": "Doppelkanister",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Ersatzkette"
+              "name": "Ersatzkette",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Spaltkeil"
+              "name": "Spaltkeil",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Elektrowerkzeugkasten"
+              "name": "Elektrowerkzeugkasten",
+              "position": "unten"
             },
             {
               "menge": 6,
-              "name": "Euro-Blitz LED"
+              "name": "Euro-Blitz LED",
+              "position": "unten"
             },
             {
               "menge": 4,
-              "name": "Verkehrsleitkegel"
+              "name": "Verkehrsleitkegel",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Absperrband"
+              "name": "Absperrband",
+              "position": "unten"
             }
           ]
         },
@@ -800,40 +847,49 @@ const BELADEPLAN_LF10 = {
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Akku-Säbelsäge"
+              "name": "Akku-Säbelsäge",
+              "position": "mitte"
             },
             {
               "menge": 3,
               "name": "Schleifscheiben",
-              "unsicher": true
+              "unsicher": true,
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Akku-Bohrschrauber"
+              "name": "Akku-Bohrschrauber",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Kiste 18V-Akkus (600x400x220)"
+              "name": "Kiste 18V-Akkus (600x400x220)",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Schornsteinkehrzeug"
+              "name": "Schornsteinkehrzeug",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Sperrwerkzeug"
+              "name": "Sperrwerkzeug",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Akku-Geradschleifer"
+              "name": "Akku-Geradschleifer",
+              "position": "mitte"
             },
             {
               "menge": 3,
-              "name": "Faltsignal"
+              "name": "Faltsignal",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Bügelsäge"
+              "name": "Bügelsäge",
+              "position": "mitte"
             }
           ]
         }
@@ -848,58 +904,71 @@ const BELADEPLAN_LF10 = {
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Wassersauger Kärcher"
+              "name": "Wassersauger Kärcher",
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Sicherheitsstrumpftasche",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Sprungpolster SP16"
+              "name": "Sprungpolster SP16",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Zubehör Wassersauger"
+              "name": "Zubehör Wassersauger",
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Kasten Tauchpumpe mit Zubehör",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Tauchpumpe mit Mast und Zubehör",
-              "unsicher": true
+              "unsicher": true,
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Personenschutzleitung PRCD"
+              "name": "Personenschutzleitung PRCD",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Knickschutz"
+              "name": "Knickschutz",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Auslaufrohr"
+              "name": "Auslaufrohr",
+              "position": "mitte"
             },
             {
               "menge": 2,
-              "name": "Seilschlauchhalter"
+              "name": "Seilschlauchhalter",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Mehrzweckleine"
+              "name": "Mehrzweckleine",
+              "position": "unten"
             },
             {
               "menge": 6,
-              "name": "Bindestrang"
+              "name": "Bindestrang",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Flachsaugbodenplatte"
+              "name": "Flachsaugbodenplatte",
+              "position": "unten"
             }
           ]
         }
@@ -914,61 +983,74 @@ const BELADEPLAN_LF10 = {
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Lüfter Leader ESV"
+              "name": "Lüfter Leader ESV",
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Akkulüfter Ramfan",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 4,
               "name": "Druckschlauch CSA mit Kiste (600x400x220)",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Kiste CSA (400x490x220)",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 2,
-              "name": "Chemikalien-Einsatzanzug"
+              "name": "Chemikalien-Einsatzanzug",
+              "position": "oben"
             },
             {
               "menge": 4,
-              "name": "Paar Schachtstiefel"
+              "name": "Paar Schachtstiefel",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Kiste Trainingsanzüge (400x490x220)"
+              "name": "Kiste Trainingsanzüge (400x490x220)",
+              "position": "mitte"
             },
             {
               "menge": 1,
               "name": "Kiste Erg. Schutzkleidung (400x490x220)",
-              "unsicher": true
+              "unsicher": true,
+              "position": "mitte"
             },
             {
               "menge": 2,
-              "name": "Halbmaske MSA"
+              "name": "Halbmaske MSA",
+              "position": "mitte"
             },
             {
               "menge": 3,
               "name": "Pack Ohrstöpsel",
-              "unsicher": true
+              "unsicher": true,
+              "position": "mitte"
             },
             {
               "menge": 8,
               "name": "Chemikalien-Einsatzanzug",
-              "unsicher": true
+              "unsicher": true,
+              "position": "unten"
             },
             {
               "menge": 9,
-              "name": "Kombifilter"
+              "name": "Kombifilter",
+              "position": "unten"
             },
             {
               "menge": 3,
-              "name": "Schutzbrillen"
+              "name": "Schutzbrillen",
+              "position": "unten"
             }
           ]
         }
@@ -983,19 +1065,23 @@ const BELADEPLAN_LF10 = {
           "gegenstaende": [
             {
               "menge": 2,
-              "name": "Druckschlauch B-20"
+              "name": "Druckschlauch B-20",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Verteiler B-CBC"
+              "name": "Verteiler B-CBC",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Übergangsstück B-C"
+              "name": "Übergangsstück B-C",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Kupplungsschlüssel ABC"
+              "name": "Kupplungsschlüssel ABC",
+              "position": "unten"
             }
           ]
         },
@@ -1005,29 +1091,35 @@ const BELADEPLAN_LF10 = {
             {
               "menge": 4,
               "name": "Schlauchtragekorb mit Druckschlauch C-15",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 4,
-              "name": "Seilschlauchhalter"
+              "name": "Seilschlauchhalter",
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Schlauchpaket",
-              "unsicher": true
+              "unsicher": true,
+              "position": "mitte"
             },
             {
               "menge": 2,
-              "name": "Druckschlauch C-30"
+              "name": "Druckschlauch C-30",
+              "position": "mitte"
             },
             {
               "menge": 2,
               "name": "Schlauchabsperrung C",
-              "unsicher": true
+              "unsicher": true,
+              "position": "unten"
             },
             {
               "menge": 6,
-              "name": "Druckschlauch B-20"
+              "name": "Druckschlauch B-20",
+              "position": "unten"
             }
           ]
         }
@@ -1042,19 +1134,23 @@ const BELADEPLAN_LF10 = {
           "gegenstaende": [
             {
               "menge": 2,
-              "name": "Druckschlauch B-20"
+              "name": "Druckschlauch B-20",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Verteiler B-CBC"
+              "name": "Verteiler B-CBC",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Kupplungsschlüssel B-C"
+              "name": "Kupplungsschlüssel B-C",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Übergangsstück C-D"
+              "name": "Übergangsstück C-D",
+              "position": "unten"
             }
           ]
         },
@@ -1063,68 +1159,84 @@ const BELADEPLAN_LF10 = {
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Wanne für Schnellangriff"
+              "name": "Wanne für Schnellangriff",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Druckschlauch C-30"
+              "name": "Druckschlauch C-30",
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Kiste Grobreinigung",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Auszug Kleinlöschgerät"
+              "name": "Auszug Kleinlöschgerät",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Kübelspritze A10"
+              "name": "Kübelspritze A10",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Feuerlöscher CO2"
+              "name": "Feuerlöscher CO2",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Feuerlöscher PG6"
+              "name": "Feuerlöscher PG6",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Kombischaumrohr S4/M4"
+              "name": "Kombischaumrohr S4/M4",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Ansaugschlauch 2D"
+              "name": "Ansaugschlauch 2D",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Löschdecke"
+              "name": "Löschdecke",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Auszug Schaum"
+              "name": "Auszug Schaum",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Mehrzweckstrahlrohr BM"
+              "name": "Mehrzweckstrahlrohr BM",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Stützkrümmer"
+              "name": "Stützkrümmer",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Zumischer Z4"
+              "name": "Zumischer Z4",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Rauchverschluss Standard"
+              "name": "Rauchverschluss Standard",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Rauchverschluss Doppeltür"
+              "name": "Rauchverschluss Doppeltür",
+              "position": "unten"
             }
           ]
         }
@@ -1432,60 +1544,63 @@ const BELADEPLAN_LF10 = {
       ]
     },
     {
-      "id": "heckbeladung-schublade",
-      "name": "Heckbeladung – Schublade",
-      "gegenstaende": [
+      "id": "heck",
+      "name": "Heck",
+      "bereiche": [
         {
-          "menge": 1,
-          "name": "Druckschlauch B-5"
+          "bereich": "Schublade",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Druckschlauch B-5"
+            },
+            {
+              "menge": 1,
+              "name": "Druckschlauch B-10"
+            },
+            {
+              "menge": 1,
+              "name": "Saugschutzkorb A"
+            },
+            {
+              "menge": 1,
+              "name": "Sammelstück"
+            },
+            {
+              "menge": 2,
+              "name": "Mehrzweckleine"
+            },
+            {
+              "menge": 1,
+              "name": "Kupplungsschlüssel ABC"
+            },
+            {
+              "menge": 4,
+              "name": "Hebelschlauchbinde"
+            }
+          ]
         },
         {
-          "menge": 1,
-          "name": "Druckschlauch B-10"
+          "bereich": "Zusatzfach rechts",
+          "gegenstaende": [
+            {
+              "menge": 2,
+              "name": "Unterlegkeil"
+            },
+            {
+              "menge": 1,
+              "name": "Rundschlinge"
+            }
+          ]
         },
         {
-          "menge": 1,
-          "name": "Saugschutzkorb A"
-        },
-        {
-          "menge": 1,
-          "name": "Sammelstück"
-        },
-        {
-          "menge": 2,
-          "name": "Mehrzweckleine"
-        },
-        {
-          "menge": 1,
-          "name": "Kupplungsschlüssel ABC"
-        },
-        {
-          "menge": 4,
-          "name": "Hebelschlauchbinde"
-        }
-      ]
-    },
-    {
-      "id": "heckbeladung-zusatzfach",
-      "name": "Heckbeladung – Zusatzfach rechts",
-      "gegenstaende": [
-        {
-          "menge": 2,
-          "name": "Unterlegkeil"
-        },
-        {
-          "menge": 1,
-          "name": "Rundschlinge"
-        }
-      ]
-    },
-    {
-      "id": "heckbeladung-unterfahrschutz",
-      "name": "Heckbeladung – Unterfahrschutz",
-      "gegenstaende": [
-        {
-          "menge": 1,
-          "name": "Abgasschlauch Fahrzeug"
+          "bereich": "Unterfahrschutz",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Abgasschlauch Fahrzeug"
+            }
+          ]
         }
       ]
     }
@@ -1593,25 +1708,37 @@ const BELADEPLAN_LF10 = {
   // sichtbaren Rollladen-Trennstege gesetzt, nicht vermessen. Reihenfolge
   // vorne->hinten je Fahrzeugseite folgt DIN-Konvention (ungerade = Fahrerseite,
   // gerade = Beifahrerseite, aufsteigend nach hinten).
+  // Jede Foto-Zone hat ein geschlossenes Bild (Rollladen zu, während der Runde gezeigt)
+  // und ein offenes Bild (Rollladen auf, wird erst beim Ergebnis eingeblendet). revealRect
+  // markiert je Zone die ungefähre Regalfläche auf dem offenen Foto für den Rot-Kreis-Hinweis.
   var SCENES = [
     {
-      id: 'fahrerseite', label: 'Fahrerseite', img: 'assets/fahrerseite.jpg',
+      id: 'fahrerseite', label: 'Fahrerseite',
+      imgClosed: 'assets/fahrerseite-zu.jpg', imgOpen: 'assets/fahrerseite-auf.jpg',
       zones: [
-        { id: 'raum1', label: 'G1', rect: [38, 38, 19, 42] },
-        { id: 'raum3', label: 'G3', rect: [57, 35, 13, 45] },
-        { id: 'raum5', label: 'G5', rect: [70, 35, 14, 48] }
+        { id: 'raum1', label: 'G1', rect: [45, 28, 20, 44], revealRect: [12, 20, 28, 60] },
+        { id: 'raum3', label: 'G3', rect: [65, 28, 18, 30], revealRect: [40, 20, 25, 60] },
+        { id: 'raum5', label: 'G5', rect: [83, 28, 9, 44], revealRect: [65, 20, 27, 60] }
       ]
     },
     {
-      id: 'beifahrerseite', label: 'Beifahrerseite', img: 'assets/beifahrerseite.jpg',
+      id: 'beifahrerseite', label: 'Beifahrerseite',
+      imgClosed: 'assets/beifahrerseite-zu.jpg', imgOpen: 'assets/beifahrerseite-auf.jpg',
       zones: [
-        { id: 'raum6', label: 'G6', rect: [6, 22, 21, 58] },
-        { id: 'raum4', label: 'G4', rect: [27, 15, 22, 65] },
-        { id: 'raum2', label: 'G2', rect: [49, 22, 21, 58] }
+        { id: 'raum6', label: 'G6', rect: [9, 31, 15, 41], revealRect: [2, 20, 28, 60] },
+        { id: 'raum4', label: 'G4', rect: [24, 31, 22, 26], revealRect: [30, 20, 30, 60] },
+        { id: 'raum2', label: 'G2', rect: [46, 31, 20, 41], revealRect: [60, 20, 33, 60] }
       ]
     },
     {
-      id: 'mannschaftsraum', label: 'Mannschaftsraum', img: 'assets/mannschaftsraum.jpg',
+      id: 'heck', label: 'Heck',
+      imgClosed: 'assets/heck-zu.jpg', imgOpen: 'assets/heck-auf.jpg',
+      zones: [
+        { id: 'heck', label: 'Heck', rect: [37, 15, 27, 50], revealRect: [39, 17, 23, 57] }
+      ]
+    },
+    {
+      id: 'mannschaftsraum', label: 'Mannschaftsraum', imgClosed: 'assets/mannschaftsraum.jpg',
       zones: [
         { id: 'mannschaftsraum', label: 'Mannschaftsraum', rect: [2, 2, 96, 96] }
       ]
@@ -1622,10 +1749,7 @@ const BELADEPLAN_LF10 = {
     { id: 'fahrerraum', label: 'Fahrerraum' },
     { id: 'drehfach-aussen', label: 'Drehfach außen' },
     { id: 'dachbeladung', label: 'Dachbeladung' },
-    { id: 'dachkasten', label: 'Dachkasten' },
-    { id: 'heckbeladung-schublade', label: 'Heck – Schublade' },
-    { id: 'heckbeladung-zusatzfach', label: 'Heck – Zusatzfach' },
-    { id: 'heckbeladung-unterfahrschutz', label: 'Heck – Unterfahrschutz' }
+    { id: 'dachkasten', label: 'Dachkasten' }
   ];
 
   // Geräteräume sind die durchnummerierten Räume 1-6; alles andere heißt
@@ -1714,7 +1838,7 @@ const BELADEPLAN_LF10 = {
 
   function buildTabs() {
     var all = SCENES.map(function (s) { return { id: s.id, label: s.label }; })
-      .concat([{ id: 'karten', label: 'Weitere Bereiche' }]);
+      .concat([{ id: 'karten', label: 'Sonstiges' }]);
     sceneTabsEl.innerHTML = '';
     all.forEach(function (t) {
       var btn = document.createElement('button');
@@ -1748,7 +1872,7 @@ const BELADEPLAN_LF10 = {
       var wrap = document.createElement('div');
       wrap.className = 'photo-scene';
       var img = document.createElement('img');
-      img.src = scene.img;
+      img.src = scene.imgClosed;
       img.alt = scene.label;
       wrap.appendChild(img);
       scene.zones.forEach(function (z) {
@@ -1804,6 +1928,13 @@ const BELADEPLAN_LF10 = {
     allDropTargets().forEach(function (el) {
       el.classList.remove('over', 'correct', 'wrong', 'reveal');
     });
+    var panel = stageEl.querySelector('.subchoice');
+    if (panel) panel.remove();
+    var circle = stageEl.querySelector('.reveal-circle');
+    if (circle) circle.remove();
+    var scene = SCENES.filter(function (s) { return s.id === activeSceneId; })[0];
+    var imgEl = stageEl.querySelector('.photo-scene img');
+    if (scene && imgEl && scene.imgClosed) imgEl.src = scene.imgClosed;
   }
 
   function pointInRect(px, py, rect) {
@@ -1902,6 +2033,33 @@ const BELADEPLAN_LF10 = {
     callHintEl.textContent = 'Und wo genau im Geräteraum?';
   }
 
+  // Beim Ergebnis (immer, unabhängig von richtig/falsch) wird - sofern die aktive Szene ein
+  // Rollladen-Bildpaar hat und die korrekte Zone darin liegt - auf das offene Foto gewechselt
+  // und die ungefähre Position (oben/mitte/unten laut Beladeplan-Reihenfolge) rot eingekreist.
+  function showReveal() {
+    var scene = SCENES.filter(function (s) { return s.id === activeSceneId; })[0];
+    if (!scene || !scene.imgOpen) return;
+    var zone = scene.zones.filter(function (z) { return z.id === currentItem.zoneId; })[0];
+    if (!zone || !zone.revealRect) return;
+    var wrap = stageEl.querySelector('.photo-scene');
+    if (!wrap) return;
+    var imgEl = wrap.querySelector('img');
+    imgEl.src = scene.imgOpen;
+    var r = zone.revealRect;
+    var frac = currentItem.position === 'oben' ? 0.22 : currentItem.position === 'unten' ? 0.78 : 0.5;
+    var cx = r[0] + r[2] / 2;
+    var cy = r[1] + r[3] * frac;
+    var cw = Math.min(r[2] * 0.9, 20);
+    var ch = Math.max(r[3] / 3, 14);
+    var circle = document.createElement('div');
+    circle.className = 'reveal-circle';
+    circle.style.left = (cx - cw / 2) + '%';
+    circle.style.top = (cy - ch / 2) + '%';
+    circle.style.width = cw + '%';
+    circle.style.height = ch + '%';
+    wrap.appendChild(circle);
+  }
+
   // Drei mögliche Ausgänge, wie gewünscht klar getrennt:
   // 1) falscher Geräteraum/Bereich getroffen
   // 2) richtiger Geräteraum, aber falsche Position (Tiefraum/Hauptfach) darin
@@ -1914,6 +2072,7 @@ const BELADEPLAN_LF10 = {
     fbStatusEl.className = 'fb-status bad';
     fbDetailEl.textContent = currentItem.name + ' gehört in ' + zoneDisplayName(currentItem) + '.';
     feedbackEl.classList.add('show');
+    showReveal();
   }
 
   function lockRoundWrongPosition() {
@@ -1925,6 +2084,7 @@ const BELADEPLAN_LF10 = {
     fbDetailEl.textContent = currentItem.name + ' liegt im richtigen ' + kind + ' (' + ZONE_LABELS[currentItem.zoneId] + '), aber im ' +
       (BEREICH_LABEL[currentItem.bereich] || currentItem.bereich) + ' – nicht im gewählten Bereich.';
     feedbackEl.classList.add('show');
+    showReveal();
   }
 
   function lockRoundCorrect() {
@@ -1936,6 +2096,7 @@ const BELADEPLAN_LF10 = {
     fbStatusEl.className = 'fb-status ok';
     fbDetailEl.textContent = currentItem.name + ' gehört in ' + zoneDisplayName(currentItem) + '.';
     feedbackEl.classList.add('show');
+    showReveal();
   }
 
   function zoneDisplayName(item) {
