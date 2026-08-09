@@ -283,6 +283,36 @@
               "position": "mitte"
             }
           ]
+        },
+        {
+          "bereich": "Drehfach außen",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Halligan-Tool",
+              "position": "mitte"
+            },
+            {
+              "menge": 1,
+              "name": "Spaltaxt",
+              "position": "mitte"
+            },
+            {
+              "menge": 2,
+              "name": "Feuerwehraxt",
+              "position": "mitte"
+            },
+            {
+              "menge": 1,
+              "name": "Bolzenschneider",
+              "position": "mitte"
+            },
+            {
+              "menge": 1,
+              "name": "Abgasschlauch Stromerzeuger",
+              "position": "mitte"
+            }
+          ]
         }
       ]
     },
@@ -635,32 +665,6 @@
     }
   ],
   "sonstige_bereiche": [
-    {
-      "id": "drehfach-aussen",
-      "name": "Drehfach außen",
-      "gegenstaende": [
-        {
-          "menge": 1,
-          "name": "Halligan-Tool"
-        },
-        {
-          "menge": 1,
-          "name": "Spaltaxt"
-        },
-        {
-          "menge": 2,
-          "name": "Feuerwehraxt"
-        },
-        {
-          "menge": 1,
-          "name": "Bolzenschneider"
-        },
-        {
-          "menge": 1,
-          "name": "Abgasschlauch Stromerzeuger"
-        }
-      ]
-    },
     {
       "id": "fahrerraum",
       "name": "Fahrerraum",
