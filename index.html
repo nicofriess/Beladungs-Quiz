@@ -1725,9 +1725,9 @@ const BELADEPLAN_LF10 = {
       id: 'beifahrerseite', label: 'Beifahrerseite',
       imgClosed: 'assets/beifahrerseite-zu.jpg', imgOpen: 'assets/beifahrerseite-auf.jpg',
       zones: [
-        { id: 'raum6', label: 'G6', rect: [9, 31, 15, 41], revealRect: [2, 20, 28, 60] },
-        { id: 'raum4', label: 'G4', rect: [24, 31, 22, 26], revealRect: [30, 20, 30, 60] },
-        { id: 'raum2', label: 'G2', rect: [46, 31, 20, 41], revealRect: [60, 20, 33, 60] }
+        { id: 'raum6', label: 'G6', rect: [9, 28, 15, 44], revealRect: [2, 20, 28, 60] },
+        { id: 'raum4', label: 'G4', rect: [24, 28, 23, 29], revealRect: [30, 20, 30, 60] },
+        { id: 'raum2', label: 'G2', rect: [47, 28, 15, 44], revealRect: [60, 20, 33, 60] }
       ]
     },
     {
@@ -1814,7 +1814,7 @@ const BELADEPLAN_LF10 = {
   }
 
   // ---------- Spielzustand ----------
-  var ROUNDS = 15;
+  var ROUNDS = 10;
   var run = { items: [], index: 0, correct: 0 };
 
   var sceneTabsEl = document.getElementById('sceneTabs');
@@ -2110,15 +2110,26 @@ const BELADEPLAN_LF10 = {
     nextRound();
   });
 
+  var QUOTES = [
+    { min: 10, text: 'Beladeplan sitzt im Schlaf – man könnte dich nachts wecken und du findest das Halligan-Tool blind. Respekt!' },
+    { min: 8, text: 'Fast perfekt einsortiert – nur eine Schublade hat sich kurz vor dir versteckt.' },
+    { min: 6, text: 'Ordentlich verlastet – für den Ernstfall reicht\'s, ein Blick in den Beladeplan schadet trotzdem nicht.' },
+    { min: 4, text: 'Da wurde offenbar spontan umgeräumt – ab zur Geräteraum-Begehung, bevor der nächste Alarm kommt.' },
+    { min: 0, text: 'Alarmstufe Rot fürs Beladeplan-Wissen – gut, dass es dieses Quiz gibt und keinen echten Einsatz.' }
+  ];
+
+  function quoteFor(correct) {
+    for (var i = 0; i < QUOTES.length; i++) {
+      if (correct >= QUOTES[i].min) return QUOTES[i].text;
+    }
+    return QUOTES[QUOTES.length - 1].text;
+  }
+
   function showResults() {
     document.getElementById('resultScore').textContent = run.correct + '/' + run.items.length;
     var pct = Math.round((run.correct / run.items.length) * 100);
     document.getElementById('resultPct').textContent = pct + ' % TREFFERQUOTE';
-    var quote = pct === 100 ? 'Beladeplan sitzt – Respekt!' :
-      pct >= 80 ? 'Stark! Nur Feinheiten fehlen noch.' :
-      pct >= 50 ? 'Solide Basis, ab und zu nochmal üben.' :
-      'Zeit für eine Runde am echten Fahrzeug.';
-    document.getElementById('resultQuote').textContent = quote;
+    document.getElementById('resultQuote').textContent = quoteFor(run.correct);
     resultsEl.hidden = false;
   }
 
