@@ -1783,6 +1783,16 @@ const BELADEPLAN_LF10 = {
   // aufgeteilt - dafür wird nach korrektem Zonentreffer per Klick der genaue Unterbereich abgefragt.
   var ITEMS = [];
   var RAUM_BEREICHE = {};
+  // Manche Gegenstände (v.a. Schläuche/Kupplungen) liegen mehrfach an unterschiedlichen
+  // Stellen im Fahrzeug. NAME_LOCATIONS sammelt je Name ALLE echten Orte, damit beim
+  // Ablegen jede davon als richtig zählt - nicht nur die eine, für die Runde gezogene Stelle.
+  var NAME_LOCATIONS = {};
+
+  function recordLocation(name, zoneId, bereich) {
+    var locs = NAME_LOCATIONS[name] || (NAME_LOCATIONS[name] = []);
+    var exists = locs.some(function (l) { return l.zoneId === zoneId && l.bereich === bereich; });
+    if (!exists) locs.push({ zoneId: zoneId, bereich: bereich });
+  }
 
   function addZone(zone) {
     if (zone.bereiche) {
@@ -1792,17 +1802,19 @@ const BELADEPLAN_LF10 = {
       }
       zone.bereiche.forEach(function (b) {
         b.gegenstaende.forEach(function (g) {
+          recordLocation(g.name, zone.id, mehrereBereiche ? b.bereich : null);
           if (g.fest_verbaut || g.keine_frage) return;
           ITEMS.push({
             name: g.name, menge: g.menge, zoneId: zone.id,
-            bereich: mehrereBereiche ? b.bereich : null
+            bereich: mehrereBereiche ? b.bereich : null, position: g.position
           });
         });
       });
     } else {
       zone.gegenstaende.forEach(function (g) {
+        recordLocation(g.name, zone.id, null);
         if (g.fest_verbaut || g.keine_frage) return;
-        ITEMS.push({ name: g.name, menge: g.menge, zoneId: zone.id, bereich: null });
+        ITEMS.push({ name: g.name, menge: g.menge, zoneId: zone.id, bereich: null, position: g.position });
       });
     }
   }
@@ -1841,6 +1853,10 @@ const BELADEPLAN_LF10 = {
   var activeSceneId = SCENES[0].id;
   var currentItem = null;
   var roundLocked = false;
+  // Bei Gegenständen mit mehreren gültigen Orten (z.B. Schläuchen) merkt sich resolvedLocation,
+  // welcher konkrete Ort per Klick bestätigt wurde - für Feedback-Text und Rot-Kreis-Reveal.
+  var resolvedLocation = null;
+  var lastCorrectBereiche = null;
 
   function buildTabs() {
     var all = SCENES.map(function (s) { return { id: s.id, label: s.label }; })
@@ -1922,6 +1938,8 @@ const BELADEPLAN_LF10 = {
     }
     currentItem = run.items[run.index];
     roundLocked = false;
+    resolvedLocation = null;
+    lastCorrectBereiche = null;
     roundNumEl.textContent = (run.index + 1) + '/' + run.items.length;
     itemNameEl.textContent = currentItem.name;
     itemQtyEl.textContent = currentItem.menge > 1 ? currentItem.menge + '×' : '';
@@ -1997,40 +2015,70 @@ const BELADEPLAN_LF10 = {
     ghost.style.top = y + 'px';
   }
 
+  function formatBereichList(bereiche) {
+    var labels = [];
+    bereiche.forEach(function (b) {
+      var label = BEREICH_LABEL[b] || b;
+      if (labels.indexOf(label) === -1) labels.push(label);
+    });
+    if (labels.length === 1) return labels[0];
+    return labels.slice(0, -1).join(', ') + ' oder ' + labels[labels.length - 1];
+  }
+
+  function formatLocationList(locs) {
+    var labels = [];
+    locs.forEach(function (l) {
+      var label = zoneDisplayName(l);
+      if (labels.indexOf(label) === -1) labels.push(label);
+    });
+    if (labels.length === 1) return labels[0];
+    return labels.slice(0, -1).join(', ') + ' oder ' + labels[labels.length - 1];
+  }
+
   function handleDrop(zoneId, el) {
     if (roundLocked || !currentItem) return;
-    var isCorrect = zoneId === currentItem.zoneId;
-    if (!isCorrect) {
+    // Manche Namen liegen mehrfach im Fahrzeug (z.B. Schläuche) - jeder echte Ort zählt als richtig,
+    // nicht nur die eine Stelle, für die diese Runde zufällig gezogen wurde.
+    var locs = NAME_LOCATIONS[currentItem.name] || [{ zoneId: currentItem.zoneId, bereich: currentItem.bereich }];
+    var zoneMatches = locs.filter(function (l) { return l.zoneId === zoneId; });
+    if (zoneMatches.length === 0) {
       el.classList.add('wrong');
       lockRoundWrongZone();
       return;
     }
     el.classList.add('correct');
-    if (currentItem.bereich) {
-      askBereich(currentItem.bereich, currentItem.zoneId);
+    if (RAUM_BEREICHE[zoneId]) {
+      askBereich(zoneMatches, zoneId);
     } else {
+      resolvedLocation = zoneMatches[0];
       lockRoundCorrect();
     }
   }
 
-  function askBereich(correctBereich, zoneId) {
+  function askBereich(zoneMatches, zoneId) {
+    var correctBereiche = zoneMatches.map(function (l) { return l.bereich; });
     var panel = document.createElement('div');
     panel.className = 'subchoice';
-    var options = shuffle(RAUM_BEREICHE[zoneId] || [correctBereich]);
+    var options = shuffle(RAUM_BEREICHE[zoneId] || correctBereiche);
+    var pairs = [];
     options.forEach(function (opt) {
       var btn = document.createElement('button');
       btn.textContent = BEREICH_LABEL[opt] || opt;
+      pairs.push({ btn: btn, opt: opt });
       btn.addEventListener('click', function () {
         if (roundLocked) return;
-        var ok = opt === correctBereich;
-        Array.prototype.forEach.call(panel.children, function (b) {
-          b.disabled = true;
-          if (b.textContent === (BEREICH_LABEL[correctBereich] || correctBereich)) b.classList.add('correct');
+        var ok = correctBereiche.indexOf(opt) !== -1;
+        pairs.forEach(function (p) {
+          p.btn.disabled = true;
+          if (correctBereiche.indexOf(p.opt) !== -1) p.btn.classList.add('correct');
         });
+        lastCorrectBereiche = correctBereiche;
         if (ok) {
+          resolvedLocation = { zoneId: zoneId, bereich: opt };
           lockRoundCorrect();
         } else {
           btn.classList.add('wrong');
+          resolvedLocation = { zoneId: zoneId, bereich: correctBereiche[0] };
           lockRoundWrongPosition();
         }
       });
@@ -2044,9 +2092,10 @@ const BELADEPLAN_LF10 = {
   // Rollladen-Bildpaar hat und die korrekte Zone darin liegt - auf das offene Foto gewechselt
   // und die ungefähre Position (oben/mitte/unten laut Beladeplan-Reihenfolge) rot eingekreist.
   function showReveal() {
+    var loc = resolvedLocation || { zoneId: currentItem.zoneId, bereich: currentItem.bereich };
     var scene = SCENES.filter(function (s) { return s.id === activeSceneId; })[0];
     if (!scene || !scene.imgOpen) return;
-    var zone = scene.zones.filter(function (z) { return z.id === currentItem.zoneId; })[0];
+    var zone = scene.zones.filter(function (z) { return z.id === loc.zoneId; })[0];
     if (!zone || !zone.revealRect) return;
     var wrap = stageEl.querySelector('.photo-scene');
     if (!wrap) return;
@@ -2078,9 +2127,10 @@ const BELADEPLAN_LF10 = {
     roundLocked = true;
     scoreTotalEl.textContent = run.index + 1;
     var kind = zoneKind(currentItem.zoneId);
+    var locs = NAME_LOCATIONS[currentItem.name] || [{ zoneId: currentItem.zoneId, bereich: currentItem.bereich }];
     fbStatusEl.textContent = 'Falscher ' + kind;
     fbStatusEl.className = 'fb-status bad';
-    fbDetailEl.textContent = currentItem.name + ' gehört in ' + zoneDisplayName(currentItem) + '.';
+    fbDetailEl.textContent = currentItem.name + ' gehört in ' + formatLocationList(locs) + '.';
     feedbackEl.classList.add('show');
     showReveal();
   }
@@ -2088,11 +2138,11 @@ const BELADEPLAN_LF10 = {
   function lockRoundWrongPosition() {
     roundLocked = true;
     scoreTotalEl.textContent = run.index + 1;
-    var kind = zoneKind(currentItem.zoneId);
+    var kind = zoneKind(resolvedLocation.zoneId);
     fbStatusEl.textContent = kind + ' richtig, Position falsch';
     fbStatusEl.className = 'fb-status bad';
-    fbDetailEl.textContent = currentItem.name + ' liegt im richtigen ' + kind + ' (' + ZONE_LABELS[currentItem.zoneId] + '), aber im ' +
-      (BEREICH_LABEL[currentItem.bereich] || currentItem.bereich) + ' – nicht im gewählten Bereich.';
+    fbDetailEl.textContent = currentItem.name + ' liegt im richtigen ' + kind + ' (' + ZONE_LABELS[resolvedLocation.zoneId] + '), aber richtig wäre ' +
+      formatBereichList(lastCorrectBereiche) + '.';
     feedbackEl.classList.add('show');
     showReveal();
   }
@@ -2104,7 +2154,7 @@ const BELADEPLAN_LF10 = {
     scoreTotalEl.textContent = run.index + 1;
     fbStatusEl.textContent = 'Richtig!';
     fbStatusEl.className = 'fb-status ok';
-    fbDetailEl.textContent = currentItem.name + ' gehört in ' + zoneDisplayName(currentItem) + '.';
+    fbDetailEl.textContent = currentItem.name + ' gehört in ' + zoneDisplayName(resolvedLocation) + '.';
     feedbackEl.classList.add('show');
     showReveal();
   }
