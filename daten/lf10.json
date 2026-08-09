@@ -1,0 +1,891 @@
+{
+  "fahrzeug": "M131 LF 10 4x2 RS3900, Feuerwehr Gerlingen (Rosenbauer, Zeichnung B64992-CA)",
+  "hinweis": "Automatisch aus dem gescannten Beladeplan (4 Fotos, Beladeplan_Freigegeben) übertragen. Einträge mit \"unsicher\": true sind wegen kleiner/gedrehter Schrift auf dem Scan nicht sicher gelesen und müssen gegen das Original geprüft werden.",
+  "raeume": [
+    {
+      "id": "raum1",
+      "name": "G1",
+      "bereiche": [
+        {
+          "bereich": "Tiefraum",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Schneidgerät Weber"
+            },
+            {
+              "menge": 1,
+              "name": "Spreizer Weber"
+            },
+            {
+              "menge": 4,
+              "name": "Stab-Pack"
+            },
+            {
+              "menge": 3,
+              "name": "Mulde"
+            }
+          ]
+        },
+        {
+          "bereich": "Geräteraum",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Standrohr BW"
+            },
+            {
+              "menge": 1,
+              "name": "Korbtrage mit Fahrwerk"
+            },
+            {
+              "menge": 1,
+              "name": "Schaufeltrage mit Kopf-Fixier-Set"
+            },
+            {
+              "menge": 1,
+              "name": "Abseilspinne"
+            },
+            {
+              "menge": 1,
+              "name": "Leerkiste (600x400x220)"
+            },
+            {
+              "menge": 1,
+              "name": "Standrohr"
+            },
+            {
+              "menge": 1,
+              "name": "Standrohrhalter"
+            },
+            {
+              "menge": 2,
+              "name": "Überflurhydrantenschlüssel"
+            },
+            {
+              "menge": 1,
+              "name": "Unterflurhydrantenschlüssel BW"
+            },
+            {
+              "menge": 1,
+              "name": "Paar Schachthaken"
+            },
+            {
+              "menge": 1,
+              "name": "Zubehörtasche PAX Spineboard"
+            },
+            {
+              "menge": 2,
+              "name": "Leitungsroller 230V"
+            },
+            {
+              "menge": 1,
+              "name": "Zubehör Rettungsgerät"
+            },
+            {
+              "menge": 1,
+              "name": "Stab-Fast"
+            },
+            {
+              "menge": 1,
+              "name": "Handwerkzeug"
+            },
+            {
+              "menge": 1,
+              "name": "Verkehrsunfallsatz"
+            },
+            {
+              "menge": 1,
+              "name": "Kasten permanente Stromversorgung"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "raum2",
+      "name": "G2",
+      "bereiche": [
+        {
+          "bereich": "Tiefraum",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Stromerzeuger 9 kVA"
+            }
+          ]
+        },
+        {
+          "bereich": "Geräteraum",
+          "gegenstaende": [
+            {
+              "menge": 2,
+              "name": "Waldarbeiter-Latzhose"
+            },
+            {
+              "menge": 2,
+              "name": "Waldarbeiter-Schutzhelm"
+            },
+            {
+              "menge": 1,
+              "name": "Personenschutzleitung PRCD"
+            },
+            {
+              "menge": 1,
+              "name": "Kiste Umwelt (600x400x320)"
+            },
+            {
+              "menge": 1,
+              "name": "Notfallwanne"
+            },
+            {
+              "menge": 1,
+              "name": "Unterlegplane"
+            },
+            {
+              "menge": 1,
+              "name": "Schadstoffdeckung",
+              "unsicher": true
+            },
+            {
+              "menge": 1,
+              "name": "Beleuchtungseinheit Meister LED"
+            },
+            {
+              "menge": 1,
+              "name": "Beleuchtungseinheit mit Zubehör Weber LED"
+            },
+            {
+              "menge": 1,
+              "name": "Stativ"
+            },
+            {
+              "menge": 1,
+              "name": "Motorsäge mit Zubehör"
+            },
+            {
+              "menge": 1,
+              "name": "Doppelkanister"
+            },
+            {
+              "menge": 1,
+              "name": "Ersatzkette"
+            },
+            {
+              "menge": 1,
+              "name": "Spaltkeil"
+            },
+            {
+              "menge": 1,
+              "name": "Elektrowerkzeugkasten"
+            },
+            {
+              "menge": 6,
+              "name": "Euro-Blitz LED"
+            },
+            {
+              "menge": 4,
+              "name": "Verkehrsleitkegel"
+            },
+            {
+              "menge": 1,
+              "name": "Absperrband"
+            }
+          ]
+        },
+        {
+          "bereich": "Auszug",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Akku-Säbelsäge"
+            },
+            {
+              "menge": 3,
+              "name": "Schleifscheiben",
+              "unsicher": true
+            },
+            {
+              "menge": 1,
+              "name": "Akku-Bohrschrauber"
+            },
+            {
+              "menge": 1,
+              "name": "Kiste 18V-Akkus (600x400x220)"
+            },
+            {
+              "menge": 1,
+              "name": "Schornsteinkehrzeug"
+            },
+            {
+              "menge": 1,
+              "name": "Sperrwerkzeug"
+            },
+            {
+              "menge": 1,
+              "name": "Akku-Geradschleifer"
+            },
+            {
+              "menge": 3,
+              "name": "Faltsignal"
+            },
+            {
+              "menge": 1,
+              "name": "Bügelsäge"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "raum3",
+      "name": "G3",
+      "bereiche": [
+        {
+          "bereich": "Geräteraum",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Wassersauger Kärcher"
+            },
+            {
+              "menge": 1,
+              "name": "Sicherheitsstrumpftasche",
+              "unsicher": true
+            },
+            {
+              "menge": 1,
+              "name": "Sprungpolster SP16"
+            },
+            {
+              "menge": 1,
+              "name": "Zubehör Wassersauger"
+            },
+            {
+              "menge": 1,
+              "name": "Kasten Tauchpumpe mit Zubehör",
+              "unsicher": true
+            },
+            {
+              "menge": 1,
+              "name": "Tauchpumpe mit Mast und Zubehör",
+              "unsicher": true
+            },
+            {
+              "menge": 1,
+              "name": "Personenschutzleitung PRCD"
+            },
+            {
+              "menge": 1,
+              "name": "Knickschutz"
+            },
+            {
+              "menge": 1,
+              "name": "Auslaufrohr"
+            },
+            {
+              "menge": 2,
+              "name": "Seilschlauchhalter"
+            },
+            {
+              "menge": 1,
+              "name": "Mehrzweckleine"
+            },
+            {
+              "menge": 6,
+              "name": "Bindestrang"
+            },
+            {
+              "menge": 1,
+              "name": "Flachsaugbodenplatte"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "raum4",
+      "name": "G4",
+      "bereiche": [
+        {
+          "bereich": "Geräteraum",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Lüfter Leader ESV"
+            },
+            {
+              "menge": 1,
+              "name": "Akkulüfter Ramfan",
+              "unsicher": true
+            },
+            {
+              "menge": 4,
+              "name": "Druckschlauch CSA mit Kiste (600x400x220)",
+              "unsicher": true
+            },
+            {
+              "menge": 1,
+              "name": "Kiste CSA (400x490x220)",
+              "unsicher": true
+            },
+            {
+              "menge": 2,
+              "name": "Chemikalien-Einsatzanzug"
+            },
+            {
+              "menge": 4,
+              "name": "Paar Schachtstiefel"
+            },
+            {
+              "menge": 1,
+              "name": "Kiste Trainingsanzüge (400x490x220)"
+            },
+            {
+              "menge": 1,
+              "name": "Kiste Erg. Schutzkleidung (400x490x220)",
+              "unsicher": true
+            },
+            {
+              "menge": 2,
+              "name": "Halbmaske MSA"
+            },
+            {
+              "menge": 3,
+              "name": "Pack Ohrstöpsel",
+              "unsicher": true
+            },
+            {
+              "menge": 8,
+              "name": "Chemikalien-Einsatzanzug",
+              "unsicher": true
+            },
+            {
+              "menge": 9,
+              "name": "Kombifilter"
+            },
+            {
+              "menge": 3,
+              "name": "Schutzbrillen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "raum5",
+      "name": "G5",
+      "bereiche": [
+        {
+          "bereich": "Tiefraum",
+          "gegenstaende": [
+            {
+              "menge": 2,
+              "name": "Druckschlauch B-20"
+            },
+            {
+              "menge": 1,
+              "name": "Verteiler B-CBC"
+            },
+            {
+              "menge": 1,
+              "name": "Übergangsstück B-C"
+            },
+            {
+              "menge": 1,
+              "name": "Kupplungsschlüssel ABC"
+            }
+          ]
+        },
+        {
+          "bereich": "Geräteraum",
+          "gegenstaende": [
+            {
+              "menge": 4,
+              "name": "Schlauchtragekorb mit Druckschlauch C-15",
+              "unsicher": true
+            },
+            {
+              "menge": 4,
+              "name": "Seilschlauchhalter"
+            },
+            {
+              "menge": 1,
+              "name": "Schlauchpaket",
+              "unsicher": true
+            },
+            {
+              "menge": 2,
+              "name": "Druckschlauch C-30"
+            },
+            {
+              "menge": 2,
+              "name": "Schlauchabsperrung C",
+              "unsicher": true
+            },
+            {
+              "menge": 6,
+              "name": "Druckschlauch B-20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "raum6",
+      "name": "G6",
+      "bereiche": [
+        {
+          "bereich": "Tiefraum",
+          "gegenstaende": [
+            {
+              "menge": 2,
+              "name": "Druckschlauch B-20"
+            },
+            {
+              "menge": 1,
+              "name": "Verteiler B-CBC"
+            },
+            {
+              "menge": 1,
+              "name": "Kupplungsschlüssel B-C"
+            },
+            {
+              "menge": 1,
+              "name": "Übergangsstück C-D"
+            }
+          ]
+        },
+        {
+          "bereich": "Geräteraum",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Wanne für Schnellangriff"
+            },
+            {
+              "menge": 1,
+              "name": "Druckschlauch C-30"
+            },
+            {
+              "menge": 1,
+              "name": "Kiste Grobreinigung",
+              "unsicher": true
+            },
+            {
+              "menge": 1,
+              "name": "Auszug Kleinlöschgerät"
+            },
+            {
+              "menge": 1,
+              "name": "Kübelspritze A10"
+            },
+            {
+              "menge": 1,
+              "name": "Feuerlöscher CO2"
+            },
+            {
+              "menge": 1,
+              "name": "Feuerlöscher PG6"
+            },
+            {
+              "menge": 1,
+              "name": "Kombischaumrohr S4/M4"
+            },
+            {
+              "menge": 1,
+              "name": "Ansaugschlauch 2D"
+            },
+            {
+              "menge": 1,
+              "name": "Löschdecke"
+            },
+            {
+              "menge": 1,
+              "name": "Auszug Schaum"
+            },
+            {
+              "menge": 1,
+              "name": "Mehrzweckstrahlrohr BM"
+            },
+            {
+              "menge": 1,
+              "name": "Stützkrümmer"
+            },
+            {
+              "menge": 1,
+              "name": "Zumischer Z4"
+            },
+            {
+              "menge": 1,
+              "name": "Rauchverschluss Standard"
+            },
+            {
+              "menge": 1,
+              "name": "Rauchverschluss Doppeltür"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sonstige_bereiche": [
+    {
+      "id": "drehfach-aussen",
+      "name": "Drehfach außen",
+      "gegenstaende": [
+        {
+          "menge": 1,
+          "name": "Halligan-Tool"
+        },
+        {
+          "menge": 1,
+          "name": "Spaltaxt"
+        },
+        {
+          "menge": 2,
+          "name": "Feuerwehraxt"
+        },
+        {
+          "menge": 1,
+          "name": "Bolzenschneider"
+        },
+        {
+          "menge": 1,
+          "name": "Abgasschlauch Stromerzeuger"
+        }
+      ]
+    },
+    {
+      "id": "fahrerraum",
+      "name": "Fahrerraum",
+      "gegenstaende": [
+        {
+          "menge": 1,
+          "name": "PA-Bostromsitz Beifahrer",
+          "fest_verbaut": true
+        },
+        {
+          "menge": 1,
+          "name": "Pressluftatmer (zwischen Fahrer und Beifahrer)"
+        },
+        {
+          "menge": 2,
+          "name": "Vollmaske in Tragedose"
+        },
+        {
+          "menge": 2,
+          "name": "Warnkleidung",
+          "keine_frage": true
+        },
+        {
+          "menge": 1,
+          "name": "Feuerwehrleine"
+        },
+        {
+          "menge": 2,
+          "name": "Handlampe Streamlight (ohne Ladeerhaltung)"
+        },
+        {
+          "menge": 1,
+          "name": "Gasmessgerät X-am 5600 (ohne Ladeerhaltung)"
+        },
+        {
+          "menge": 2,
+          "name": "Handsprechfunkgerät (mit Ladeerhaltung)"
+        },
+        {
+          "menge": 1,
+          "name": "4m Analog-Funkgerät",
+          "fest_verbaut": true
+        },
+        {
+          "menge": 1,
+          "name": "Ericards",
+          "keine_frage": true
+        },
+        {
+          "menge": 1,
+          "name": "Digitalkamera",
+          "keine_frage": true
+        },
+        {
+          "menge": 1,
+          "name": "Schlüsselsatz",
+          "keine_frage": true
+        },
+        {
+          "menge": 1,
+          "name": "Clipboard",
+          "keine_frage": true
+        },
+        {
+          "menge": 2,
+          "name": "DIN A4 Ordner",
+          "keine_frage": true
+        },
+        {
+          "menge": 1,
+          "name": "Tablet"
+        }
+      ]
+    },
+    {
+      "id": "mannschaftsraum",
+      "name": "Mannschaftsraum",
+      "bereiche": [
+        {
+          "bereich": "Hauptteil",
+          "gegenstaende": [
+            {
+              "menge": 4,
+              "name": "Pressluftatmer"
+            },
+            {
+              "menge": 4,
+              "name": "Vollmaske"
+            },
+            {
+              "menge": 7,
+              "name": "Warnkleidung",
+              "keine_frage": true
+            },
+            {
+              "menge": 4,
+              "name": "Handsprechfunkgerät (mit Ladeerhaltung)"
+            },
+            {
+              "menge": 6,
+              "name": "Handlampe Streamlight (ohne Ladeerhaltung)"
+            },
+            {
+              "menge": 2,
+              "name": "Karton Infektionsschutzhandschuh"
+            },
+            {
+              "menge": 2,
+              "name": "Atemschutzüberwachungssystem"
+            },
+            {
+              "menge": 2,
+              "name": "Wärmebildkamera (ohne Ladeerhaltung)"
+            },
+            {
+              "menge": 1,
+              "name": "Notfallrucksack"
+            },
+            {
+              "menge": 2,
+              "name": "Fluchthaube"
+            },
+            {
+              "menge": 6,
+              "name": "Feuerwehrleine im Beutel"
+            },
+            {
+              "menge": 1,
+              "name": "Gasmessgerät X-am 5600 (ohne Ladeerhaltung)"
+            },
+            {
+              "menge": 1,
+              "name": "Karton medizinischer Mundschutz"
+            },
+            {
+              "menge": 1,
+              "name": "Karton FFP2-Masken"
+            }
+          ]
+        },
+        {
+          "bereich": "Sitzkasten S1",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Standheizung",
+              "fest_verbaut": true
+            },
+            {
+              "menge": 1,
+              "name": "Bordwerkzeug"
+            },
+            {
+              "menge": 1,
+              "name": "Abschleppseil"
+            },
+            {
+              "menge": 2,
+              "name": "Schäkel"
+            },
+            {
+              "menge": 1,
+              "name": "Warndreieck"
+            },
+            {
+              "menge": 1,
+              "name": "Warnleuchte"
+            }
+          ]
+        },
+        {
+          "bereich": "Sitzkasten S2",
+          "gegenstaende": [
+            {
+              "menge": 8,
+              "name": "Fluchthaube"
+            },
+            {
+              "menge": 1,
+              "name": "Krankenhausdecke"
+            },
+            {
+              "menge": 1,
+              "name": "Rettungstuch"
+            },
+            {
+              "menge": 1,
+              "name": "Tunnelausrüstung"
+            },
+            {
+              "menge": 1,
+              "name": "Getränkeeinsatz für Tragekasten (12x0,5L)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dachbeladung",
+      "name": "Dachbeladung",
+      "gegenstaende": [
+        {
+          "menge": 4,
+          "name": "Saugschlauch A"
+        },
+        {
+          "menge": 1,
+          "name": "Steckleiter 4-teilig"
+        },
+        {
+          "menge": 1,
+          "name": "Steckleiter-Verbindungsteil"
+        },
+        {
+          "menge": 1,
+          "name": "Schiebleiter 3-teilig auf mechanischer Absenkvorrichtung"
+        }
+      ]
+    },
+    {
+      "id": "dachkasten",
+      "name": "Dachkasten",
+      "gegenstaende": [
+        {
+          "menge": 1,
+          "name": "Gestänge Schornstein"
+        },
+        {
+          "menge": 1,
+          "name": "Spaten"
+        },
+        {
+          "menge": 2,
+          "name": "Dunghacke"
+        },
+        {
+          "menge": 2,
+          "name": "Dunggabel"
+        },
+        {
+          "menge": 1,
+          "name": "Stechschaufel"
+        },
+        {
+          "menge": 1,
+          "name": "Sandschaufel"
+        },
+        {
+          "menge": 2,
+          "name": "Stossbesen"
+        },
+        {
+          "menge": 3,
+          "name": "Schlauchbrücke (Gummi, faltbar)"
+        },
+        {
+          "menge": 1,
+          "name": "Einreißhaken"
+        },
+        {
+          "menge": 2,
+          "name": "Wasserschieber"
+        },
+        {
+          "menge": 1,
+          "name": "Benzinkanister 20L (leer)"
+        },
+        {
+          "menge": 2,
+          "name": "Weithalskanister"
+        }
+      ]
+    },
+    {
+      "id": "heckbeladung-schublade",
+      "name": "Heckbeladung – Schublade",
+      "gegenstaende": [
+        {
+          "menge": 1,
+          "name": "Druckschlauch B-5"
+        },
+        {
+          "menge": 1,
+          "name": "Druckschlauch B-10"
+        },
+        {
+          "menge": 1,
+          "name": "Saugschutzkorb A"
+        },
+        {
+          "menge": 1,
+          "name": "Sammelstück"
+        },
+        {
+          "menge": 2,
+          "name": "Mehrzweckleine"
+        },
+        {
+          "menge": 1,
+          "name": "Kupplungsschlüssel ABC"
+        },
+        {
+          "menge": 4,
+          "name": "Hebelschlauchbinde"
+        }
+      ]
+    },
+    {
+      "id": "heckbeladung-zusatzfach",
+      "name": "Heckbeladung – Zusatzfach rechts",
+      "gegenstaende": [
+        {
+          "menge": 2,
+          "name": "Unterlegkeil"
+        },
+        {
+          "menge": 1,
+          "name": "Rundschlinge"
+        }
+      ]
+    },
+    {
+      "id": "heckbeladung-unterfahrschutz",
+      "name": "Heckbeladung – Unterfahrschutz",
+      "gegenstaende": [
+        {
+          "menge": 1,
+          "name": "Abgasschlauch Fahrzeug"
+        }
+      ]
+    }
+  ]
+}
