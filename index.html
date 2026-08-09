@@ -606,7 +606,7 @@ const BELADEPLAN_LF10 = {
   "raeume": [
     {
       "id": "raum1",
-      "name": "Geräteraum 1",
+      "name": "G1",
       "bereiche": [
         {
           "bereich": "Tiefraum",
@@ -706,7 +706,7 @@ const BELADEPLAN_LF10 = {
     },
     {
       "id": "raum2",
-      "name": "Geräteraum 2",
+      "name": "G2",
       "bereiche": [
         {
           "bereich": "Tiefraum",
@@ -794,12 +794,54 @@ const BELADEPLAN_LF10 = {
               "name": "Absperrband"
             }
           ]
+        },
+        {
+          "bereich": "Auszug",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Akku-Säbelsäge"
+            },
+            {
+              "menge": 3,
+              "name": "Schleifscheiben",
+              "unsicher": true
+            },
+            {
+              "menge": 1,
+              "name": "Akku-Bohrschrauber"
+            },
+            {
+              "menge": 1,
+              "name": "Kiste 18V-Akkus (600x400x220)"
+            },
+            {
+              "menge": 1,
+              "name": "Schornsteinkehrzeug"
+            },
+            {
+              "menge": 1,
+              "name": "Sperrwerkzeug"
+            },
+            {
+              "menge": 1,
+              "name": "Akku-Geradschleifer"
+            },
+            {
+              "menge": 3,
+              "name": "Faltsignal"
+            },
+            {
+              "menge": 1,
+              "name": "Bügelsäge"
+            }
+          ]
         }
       ]
     },
     {
       "id": "raum3",
-      "name": "Geräteraum 3",
+      "name": "G3",
       "bereiche": [
         {
           "bereich": "Geräteraum",
@@ -865,7 +907,7 @@ const BELADEPLAN_LF10 = {
     },
     {
       "id": "raum4",
-      "name": "Geräteraum 4",
+      "name": "G4",
       "bereiche": [
         {
           "bereich": "Geräteraum",
@@ -934,7 +976,7 @@ const BELADEPLAN_LF10 = {
     },
     {
       "id": "raum5",
-      "name": "Geräteraum 5",
+      "name": "G5",
       "bereiche": [
         {
           "bereich": "Tiefraum",
@@ -993,7 +1035,7 @@ const BELADEPLAN_LF10 = {
     },
     {
       "id": "raum6",
-      "name": "Geräteraum 6",
+      "name": "G6",
       "bereiche": [
         {
           "bereich": "Tiefraum",
@@ -1096,7 +1138,7 @@ const BELADEPLAN_LF10 = {
       "gegenstaende": [
         {
           "menge": 1,
-          "name": "Hooligan Tool"
+          "name": "Halligan-Tool"
         },
         {
           "menge": 1,
@@ -1113,49 +1155,6 @@ const BELADEPLAN_LF10 = {
         {
           "menge": 1,
           "name": "Abgasschlauch Stromerzeuger"
-        }
-      ]
-    },
-    {
-      "id": "drehfach-innen",
-      "name": "Drehfach innen",
-      "gegenstaende": [
-        {
-          "menge": 1,
-          "name": "Akku-Säbelsäge"
-        },
-        {
-          "menge": 3,
-          "name": "Schleifscheiben",
-          "unsicher": true
-        },
-        {
-          "menge": 1,
-          "name": "Akku-Bohrschrauber"
-        },
-        {
-          "menge": 1,
-          "name": "Kiste 18V-Akkus (600x400x220)"
-        },
-        {
-          "menge": 1,
-          "name": "Schornsteinkehrzeug"
-        },
-        {
-          "menge": 1,
-          "name": "Sperrwerkzeug"
-        },
-        {
-          "menge": 1,
-          "name": "Akku-Geradschleifer"
-        },
-        {
-          "menge": 3,
-          "name": "Faltsignal"
-        },
-        {
-          "menge": 1,
-          "name": "Bügelsäge"
         }
       ]
     },
@@ -1178,7 +1177,8 @@ const BELADEPLAN_LF10 = {
         },
         {
           "menge": 2,
-          "name": "Warnkleidung"
+          "name": "Warnkleidung",
+          "keine_frage": true
         },
         {
           "menge": 1,
@@ -1203,23 +1203,28 @@ const BELADEPLAN_LF10 = {
         },
         {
           "menge": 1,
-          "name": "Ericards"
+          "name": "Ericards",
+          "keine_frage": true
         },
         {
           "menge": 1,
-          "name": "Digitalkamera"
+          "name": "Digitalkamera",
+          "keine_frage": true
         },
         {
           "menge": 1,
-          "name": "Schlüsselsatz"
+          "name": "Schlüsselsatz",
+          "keine_frage": true
         },
         {
           "menge": 1,
-          "name": "Clipboard"
+          "name": "Clipboard",
+          "keine_frage": true
         },
         {
           "menge": 2,
-          "name": "DIN A4 Ordner"
+          "name": "DIN A4 Ordner",
+          "keine_frage": true
         },
         {
           "menge": 1,
@@ -1230,119 +1235,123 @@ const BELADEPLAN_LF10 = {
     {
       "id": "mannschaftsraum",
       "name": "Mannschaftsraum",
-      "gegenstaende": [
+      "bereiche": [
         {
-          "menge": 4,
-          "name": "Pressluftatmer"
+          "bereich": "Hauptteil",
+          "gegenstaende": [
+            {
+              "menge": 4,
+              "name": "Pressluftatmer"
+            },
+            {
+              "menge": 4,
+              "name": "Vollmaske"
+            },
+            {
+              "menge": 7,
+              "name": "Warnkleidung",
+              "keine_frage": true
+            },
+            {
+              "menge": 4,
+              "name": "Handsprechfunkgerät (mit Ladeerhaltung)"
+            },
+            {
+              "menge": 6,
+              "name": "Handlampe Streamlight (ohne Ladeerhaltung)"
+            },
+            {
+              "menge": 2,
+              "name": "Karton Infektionsschutzhandschuh"
+            },
+            {
+              "menge": 2,
+              "name": "Atemschutzüberwachungssystem"
+            },
+            {
+              "menge": 2,
+              "name": "Wärmebildkamera (ohne Ladeerhaltung)"
+            },
+            {
+              "menge": 1,
+              "name": "Notfallrucksack"
+            },
+            {
+              "menge": 2,
+              "name": "Fluchthaube"
+            },
+            {
+              "menge": 6,
+              "name": "Feuerwehrleine im Beutel"
+            },
+            {
+              "menge": 1,
+              "name": "Gasmessgerät X-am 5600 (ohne Ladeerhaltung)"
+            },
+            {
+              "menge": 1,
+              "name": "Karton medizinischer Mundschutz"
+            },
+            {
+              "menge": 1,
+              "name": "Karton FFP2-Masken"
+            }
+          ]
         },
         {
-          "menge": 4,
-          "name": "Vollmaske"
+          "bereich": "Sitzkasten S1",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Standheizung",
+              "fest_verbaut": true
+            },
+            {
+              "menge": 1,
+              "name": "Bordwerkzeug"
+            },
+            {
+              "menge": 1,
+              "name": "Abschleppseil"
+            },
+            {
+              "menge": 2,
+              "name": "Schäkel"
+            },
+            {
+              "menge": 1,
+              "name": "Warndreieck"
+            },
+            {
+              "menge": 1,
+              "name": "Warnleuchte"
+            }
+          ]
         },
         {
-          "menge": 7,
-          "name": "Warnkleidung"
-        },
-        {
-          "menge": 4,
-          "name": "Handsprechfunkgerät (mit Ladeerhaltung)"
-        },
-        {
-          "menge": 6,
-          "name": "Handlampe Streamlight (ohne Ladeerhaltung)"
-        },
-        {
-          "menge": 2,
-          "name": "Karton Infektionsschutzhandschuh"
-        },
-        {
-          "menge": 2,
-          "name": "Atemschutzüberwachungssystem"
-        },
-        {
-          "menge": 2,
-          "name": "Wärmebildkamera (ohne Ladeerhaltung)"
-        },
-        {
-          "menge": 1,
-          "name": "Notfallrucksack"
-        },
-        {
-          "menge": 2,
-          "name": "Fluchthaube"
-        },
-        {
-          "menge": 6,
-          "name": "Feuerwehrleine im Beutel"
-        },
-        {
-          "menge": 1,
-          "name": "Gasmessgerät X-am 5600 (ohne Ladeerhaltung)"
-        },
-        {
-          "menge": 1,
-          "name": "Karton medizinischer Mundschutz"
-        },
-        {
-          "menge": 1,
-          "name": "Karton FFP2-Masken"
-        }
-      ]
-    },
-    {
-      "id": "sitzkasten-s1",
-      "name": "Sitzkasten S1",
-      "gegenstaende": [
-        {
-          "menge": 1,
-          "name": "Standheizung",
-          "fest_verbaut": true
-        },
-        {
-          "menge": 1,
-          "name": "Bordwerkzeug"
-        },
-        {
-          "menge": 1,
-          "name": "Abschleppseil"
-        },
-        {
-          "menge": 2,
-          "name": "Schäkel"
-        },
-        {
-          "menge": 1,
-          "name": "Warndreieck"
-        },
-        {
-          "menge": 1,
-          "name": "Warnleuchte"
-        }
-      ]
-    },
-    {
-      "id": "sitzkasten-s2",
-      "name": "Sitzkasten S2",
-      "gegenstaende": [
-        {
-          "menge": 8,
-          "name": "Fluchthaube"
-        },
-        {
-          "menge": 1,
-          "name": "Krankenhausdecke"
-        },
-        {
-          "menge": 1,
-          "name": "Rettungstuch"
-        },
-        {
-          "menge": 1,
-          "name": "Tunnelausrüstung"
-        },
-        {
-          "menge": 1,
-          "name": "Getränkeeinsatz für Tragekasten (12x0,5L)"
+          "bereich": "Sitzkasten S2",
+          "gegenstaende": [
+            {
+              "menge": 8,
+              "name": "Fluchthaube"
+            },
+            {
+              "menge": 1,
+              "name": "Krankenhausdecke"
+            },
+            {
+              "menge": 1,
+              "name": "Rettungstuch"
+            },
+            {
+              "menge": 1,
+              "name": "Tunnelausrüstung"
+            },
+            {
+              "menge": 1,
+              "name": "Getränkeeinsatz für Tragekasten (12x0,5L)"
+            }
+          ]
         }
       ]
     },
@@ -1406,7 +1415,7 @@ const BELADEPLAN_LF10 = {
         },
         {
           "menge": 1,
-          "name": "Einreibhaken"
+          "name": "Einreißhaken"
         },
         {
           "menge": 2,
@@ -1588,17 +1597,17 @@ const BELADEPLAN_LF10 = {
     {
       id: 'fahrerseite', label: 'Fahrerseite', img: 'assets/fahrerseite.jpg',
       zones: [
-        { id: 'raum1', label: 'Geräteraum 1', rect: [38, 38, 19, 42] },
-        { id: 'raum3', label: 'Geräteraum 3', rect: [57, 35, 13, 45] },
-        { id: 'raum5', label: 'Geräteraum 5', rect: [70, 35, 14, 48] }
+        { id: 'raum1', label: 'G1', rect: [38, 38, 19, 42] },
+        { id: 'raum3', label: 'G3', rect: [57, 35, 13, 45] },
+        { id: 'raum5', label: 'G5', rect: [70, 35, 14, 48] }
       ]
     },
     {
       id: 'beifahrerseite', label: 'Beifahrerseite', img: 'assets/beifahrerseite.jpg',
       zones: [
-        { id: 'raum6', label: 'Geräteraum 6', rect: [6, 22, 21, 58] },
-        { id: 'raum4', label: 'Geräteraum 4', rect: [27, 15, 22, 65] },
-        { id: 'raum2', label: 'Geräteraum 2', rect: [49, 22, 21, 58] }
+        { id: 'raum6', label: 'G6', rect: [6, 22, 21, 58] },
+        { id: 'raum4', label: 'G4', rect: [27, 15, 22, 65] },
+        { id: 'raum2', label: 'G2', rect: [49, 22, 21, 58] }
       ]
     },
     {
@@ -1612,9 +1621,6 @@ const BELADEPLAN_LF10 = {
   var CARD_ZONES = [
     { id: 'fahrerraum', label: 'Fahrerraum' },
     { id: 'drehfach-aussen', label: 'Drehfach außen' },
-    { id: 'drehfach-innen', label: 'Drehfach innen' },
-    { id: 'sitzkasten-s1', label: 'Sitzkasten S1' },
-    { id: 'sitzkasten-s2', label: 'Sitzkasten S2' },
     { id: 'dachbeladung', label: 'Dachbeladung' },
     { id: 'dachkasten', label: 'Dachkasten' },
     { id: 'heckbeladung-schublade', label: 'Heck – Schublade' },
@@ -1641,25 +1647,38 @@ const BELADEPLAN_LF10 = {
   // ---------- Beladeplan in flache Item-Liste umwandeln ----------
   // Fest im Fahrzeug verbaute Ausstattung (Sitze, fest eingebautes Funkgerät, Standheizung, ...)
   // wird nicht abgefragt - im Beladeplan mit "fest_verbaut": true markiert.
+  // Gegenstände, die als Quiz-Frage keinen Sinn ergeben (z.B. Warnkleidung, Büroausstattung
+  // im Fahrerraum), sind mit "keine_frage": true markiert und werden ebenfalls ausgelassen.
+  // Manche Zonen (Geräteräume, Mannschaftsraum) sind intern per "bereiche" in Unterbereiche
+  // aufgeteilt - dafür wird nach korrektem Zonentreffer per Klick der genaue Unterbereich abgefragt.
   var ITEMS = [];
-  BELADEPLAN_LF10.raeume.forEach(function (raum) {
-    var mehrereBereiche = raum.bereiche.length > 1;
-    raum.bereiche.forEach(function (b) {
-      b.gegenstaende.forEach(function (g) {
-        if (g.fest_verbaut) return;
-        ITEMS.push({
-          name: g.name, menge: g.menge, zoneId: raum.id,
-          bereich: mehrereBereiche ? b.bereich : null
+  var RAUM_BEREICHE = {};
+
+  function addZone(zone) {
+    if (zone.bereiche) {
+      var mehrereBereiche = zone.bereiche.length > 1;
+      if (mehrereBereiche) {
+        RAUM_BEREICHE[zone.id] = zone.bereiche.map(function (b) { return b.bereich; });
+      }
+      zone.bereiche.forEach(function (b) {
+        b.gegenstaende.forEach(function (g) {
+          if (g.fest_verbaut || g.keine_frage) return;
+          ITEMS.push({
+            name: g.name, menge: g.menge, zoneId: zone.id,
+            bereich: mehrereBereiche ? b.bereich : null
+          });
         });
       });
-    });
-  });
-  BELADEPLAN_LF10.sonstige_bereiche.forEach(function (bereich) {
-    bereich.gegenstaende.forEach(function (g) {
-      if (g.fest_verbaut) return;
-      ITEMS.push({ name: g.name, menge: g.menge, zoneId: bereich.id, bereich: null });
-    });
-  });
+    } else {
+      zone.gegenstaende.forEach(function (g) {
+        if (g.fest_verbaut || g.keine_frage) return;
+        ITEMS.push({ name: g.name, menge: g.menge, zoneId: zone.id, bereich: null });
+      });
+    }
+  }
+
+  BELADEPLAN_LF10.raeume.forEach(addZone);
+  BELADEPLAN_LF10.sonstige_bereiche.forEach(addZone);
 
   function shuffle(arr) {
     var a = arr.slice();
@@ -1850,16 +1869,16 @@ const BELADEPLAN_LF10 = {
     }
     el.classList.add('correct');
     if (currentItem.bereich) {
-      askBereich(currentItem.bereich);
+      askBereich(currentItem.bereich, currentItem.zoneId);
     } else {
       lockRoundCorrect();
     }
   }
 
-  function askBereich(correctBereich) {
+  function askBereich(correctBereich, zoneId) {
     var panel = document.createElement('div');
     panel.className = 'subchoice';
-    var options = shuffle(['Tiefraum', 'Geräteraum']);
+    var options = shuffle(RAUM_BEREICHE[zoneId] || [correctBereich]);
     options.forEach(function (opt) {
       var btn = document.createElement('button');
       btn.textContent = BEREICH_LABEL[opt] || opt;
