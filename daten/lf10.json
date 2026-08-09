@@ -281,12 +281,7 @@
               "menge": 1,
               "name": "Bügelsäge",
               "position": "mitte"
-            }
-          ]
-        },
-        {
-          "bereich": "Drehfach außen",
-          "gegenstaende": [
+            },
             {
               "menge": 1,
               "name": "Halligan-Tool",
