@@ -1720,18 +1720,18 @@ const BELADEPLAN_LF10 = {
       id: 'fahrerseite', label: 'Fahrerseite',
       imgClosed: 'assets/fahrerseite-zu.jpg', imgOpen: 'assets/fahrerseite-auf.jpg',
       zones: [
-        { id: 'raum1', label: 'G1', rect: [45, 28, 20, 44], revealRect: [12, 20, 28, 60] },
-        { id: 'raum3', label: 'G3', rect: [65, 28, 18, 30], revealRect: [40, 20, 25, 60] },
-        { id: 'raum5', label: 'G5', rect: [83, 28, 9, 44], revealRect: [65, 20, 27, 60] }
+        { id: 'raum1', label: 'G1', rect: [45, 28, 20, 44], revealRect: [13, 20, 28, 60] },
+        { id: 'raum3', label: 'G3', rect: [65, 28, 18, 30], revealRect: [41, 20, 23, 60] },
+        { id: 'raum5', label: 'G5', rect: [83, 28, 9, 44], revealRect: [64, 20, 29, 60] }
       ]
     },
     {
       id: 'beifahrerseite', label: 'Beifahrerseite',
       imgClosed: 'assets/beifahrerseite-zu.jpg', imgOpen: 'assets/beifahrerseite-auf.jpg',
       zones: [
-        { id: 'raum6', label: 'G6', rect: [9, 28, 12, 44], revealRect: [2, 20, 28, 60] },
-        { id: 'raum4', label: 'G4', rect: [21, 28, 17, 30], revealRect: [30, 20, 30, 60] },
-        { id: 'raum2', label: 'G2', rect: [38, 28, 18, 44], revealRect: [60, 20, 33, 60] }
+        { id: 'raum6', label: 'G6', rect: [9, 28, 12, 44], revealRect: [2, 20, 27, 60] },
+        { id: 'raum4', label: 'G4', rect: [21, 28, 17, 30], revealRect: [29, 20, 30, 60] },
+        { id: 'raum2', label: 'G2', rect: [38, 28, 18, 44], revealRect: [59, 20, 34, 60] }
       ]
     },
     {
@@ -1748,6 +1748,14 @@ const BELADEPLAN_LF10 = {
       ]
     }
   ];
+
+  // Alle Szenenfotos schon beim Laden anstoßen, damit das offene Foto beim Ergebnis
+  // sofort aus dem Cache kommt statt erst dann nachgeladen zu werden.
+  SCENES.forEach(function (s) {
+    [s.imgClosed, s.imgOpen].forEach(function (src) {
+      if (src) { var pre = new Image(); pre.src = src; }
+    });
+  });
 
   var CARD_ZONES = [
     { id: 'fahrerraum', label: 'Fahrerraum' },
@@ -1930,6 +1938,7 @@ const BELADEPLAN_LF10 = {
   function clearZoneStates() {
     allDropTargets().forEach(function (el) {
       el.classList.remove('over', 'correct', 'wrong', 'reveal');
+      el.style.display = '';
     });
     var panel = stageEl.querySelector('.subchoice');
     if (panel) panel.remove();
@@ -2048,6 +2057,9 @@ const BELADEPLAN_LF10 = {
     if (!wrap) return;
     var imgEl = wrap.querySelector('img');
     imgEl.src = scene.imgOpen;
+    // Die Dropzonen-Rahmen/Labels sind für das geschlossene Foto kalibriert und
+    // passen nicht zum offenen Foto - beim Reveal ausblenden, bis die nächste Runde startet.
+    wrap.querySelectorAll('.drop-zone').forEach(function (dz) { dz.style.display = 'none'; });
     var r = zone.revealRect;
     var frac = currentItem.position === 'oben' ? 0.22 : currentItem.position === 'unten' ? 0.78 : 0.5;
     var cx = r[0] + r[2] / 2;
