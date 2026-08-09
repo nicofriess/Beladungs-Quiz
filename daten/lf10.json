@@ -11,19 +11,23 @@
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Schneidgerät Weber"
+              "name": "Schneidgerät Weber",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Spreizer Weber"
+              "name": "Spreizer Weber",
+              "position": "unten"
             },
             {
               "menge": 4,
-              "name": "Stab-Pack"
+              "name": "Stab-Pack",
+              "position": "unten"
             },
             {
               "menge": 3,
-              "name": "Mulde"
+              "name": "Mulde",
+              "position": "unten"
             }
           ]
         },
@@ -32,71 +36,88 @@
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Standrohr BW"
+              "name": "Standrohr BW",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Korbtrage mit Fahrwerk"
+              "name": "Korbtrage mit Fahrwerk",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Schaufeltrage mit Kopf-Fixier-Set"
+              "name": "Schaufeltrage mit Kopf-Fixier-Set",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Abseilspinne"
+              "name": "Abseilspinne",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Leerkiste (600x400x220)"
+              "name": "Leerkiste (600x400x220)",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Standrohr"
+              "name": "Standrohr",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Standrohrhalter"
+              "name": "Standrohrhalter",
+              "position": "mitte"
             },
             {
               "menge": 2,
-              "name": "Überflurhydrantenschlüssel"
+              "name": "Überflurhydrantenschlüssel",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Unterflurhydrantenschlüssel BW"
+              "name": "Unterflurhydrantenschlüssel BW",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Paar Schachthaken"
+              "name": "Paar Schachthaken",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Zubehörtasche PAX Spineboard"
+              "name": "Zubehörtasche PAX Spineboard",
+              "position": "mitte"
             },
             {
               "menge": 2,
-              "name": "Leitungsroller 230V"
+              "name": "Leitungsroller 230V",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Zubehör Rettungsgerät"
+              "name": "Zubehör Rettungsgerät",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Stab-Fast"
+              "name": "Stab-Fast",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Handwerkzeug"
+              "name": "Handwerkzeug",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Verkehrsunfallsatz"
+              "name": "Verkehrsunfallsatz",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Kasten permanente Stromversorgung"
+              "name": "Kasten permanente Stromversorgung",
+              "position": "unten"
             }
           ]
         }
@@ -111,7 +132,8 @@
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Stromerzeuger 9 kVA"
+              "name": "Stromerzeuger 9 kVA",
+              "position": "unten"
             }
           ]
         },
@@ -120,76 +142,94 @@
           "gegenstaende": [
             {
               "menge": 2,
-              "name": "Waldarbeiter-Latzhose"
+              "name": "Waldarbeiter-Latzhose",
+              "position": "oben"
             },
             {
               "menge": 2,
-              "name": "Waldarbeiter-Schutzhelm"
+              "name": "Waldarbeiter-Schutzhelm",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Personenschutzleitung PRCD"
+              "name": "Personenschutzleitung PRCD",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Kiste Umwelt (600x400x320)"
+              "name": "Kiste Umwelt (600x400x320)",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Notfallwanne"
+              "name": "Notfallwanne",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Unterlegplane"
+              "name": "Unterlegplane",
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Schadstoffdeckung",
-              "unsicher": true
+              "unsicher": true,
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Beleuchtungseinheit Meister LED"
+              "name": "Beleuchtungseinheit Meister LED",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Beleuchtungseinheit mit Zubehör Weber LED"
+              "name": "Beleuchtungseinheit mit Zubehör Weber LED",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Stativ"
+              "name": "Stativ",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Motorsäge mit Zubehör"
+              "name": "Motorsäge mit Zubehör",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Doppelkanister"
+              "name": "Doppelkanister",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Ersatzkette"
+              "name": "Ersatzkette",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Spaltkeil"
+              "name": "Spaltkeil",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Elektrowerkzeugkasten"
+              "name": "Elektrowerkzeugkasten",
+              "position": "unten"
             },
             {
               "menge": 6,
-              "name": "Euro-Blitz LED"
+              "name": "Euro-Blitz LED",
+              "position": "unten"
             },
             {
               "menge": 4,
-              "name": "Verkehrsleitkegel"
+              "name": "Verkehrsleitkegel",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Absperrband"
+              "name": "Absperrband",
+              "position": "unten"
             }
           ]
         },
@@ -198,40 +238,49 @@
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Akku-Säbelsäge"
+              "name": "Akku-Säbelsäge",
+              "position": "mitte"
             },
             {
               "menge": 3,
               "name": "Schleifscheiben",
-              "unsicher": true
+              "unsicher": true,
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Akku-Bohrschrauber"
+              "name": "Akku-Bohrschrauber",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Kiste 18V-Akkus (600x400x220)"
+              "name": "Kiste 18V-Akkus (600x400x220)",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Schornsteinkehrzeug"
+              "name": "Schornsteinkehrzeug",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Sperrwerkzeug"
+              "name": "Sperrwerkzeug",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Akku-Geradschleifer"
+              "name": "Akku-Geradschleifer",
+              "position": "mitte"
             },
             {
               "menge": 3,
-              "name": "Faltsignal"
+              "name": "Faltsignal",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Bügelsäge"
+              "name": "Bügelsäge",
+              "position": "mitte"
             }
           ]
         }
@@ -246,58 +295,71 @@
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Wassersauger Kärcher"
+              "name": "Wassersauger Kärcher",
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Sicherheitsstrumpftasche",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Sprungpolster SP16"
+              "name": "Sprungpolster SP16",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Zubehör Wassersauger"
+              "name": "Zubehör Wassersauger",
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Kasten Tauchpumpe mit Zubehör",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Tauchpumpe mit Mast und Zubehör",
-              "unsicher": true
+              "unsicher": true,
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Personenschutzleitung PRCD"
+              "name": "Personenschutzleitung PRCD",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Knickschutz"
+              "name": "Knickschutz",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Auslaufrohr"
+              "name": "Auslaufrohr",
+              "position": "mitte"
             },
             {
               "menge": 2,
-              "name": "Seilschlauchhalter"
+              "name": "Seilschlauchhalter",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Mehrzweckleine"
+              "name": "Mehrzweckleine",
+              "position": "unten"
             },
             {
               "menge": 6,
-              "name": "Bindestrang"
+              "name": "Bindestrang",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Flachsaugbodenplatte"
+              "name": "Flachsaugbodenplatte",
+              "position": "unten"
             }
           ]
         }
@@ -312,61 +374,74 @@
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Lüfter Leader ESV"
+              "name": "Lüfter Leader ESV",
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Akkulüfter Ramfan",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 4,
               "name": "Druckschlauch CSA mit Kiste (600x400x220)",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Kiste CSA (400x490x220)",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 2,
-              "name": "Chemikalien-Einsatzanzug"
+              "name": "Chemikalien-Einsatzanzug",
+              "position": "oben"
             },
             {
               "menge": 4,
-              "name": "Paar Schachtstiefel"
+              "name": "Paar Schachtstiefel",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Kiste Trainingsanzüge (400x490x220)"
+              "name": "Kiste Trainingsanzüge (400x490x220)",
+              "position": "mitte"
             },
             {
               "menge": 1,
               "name": "Kiste Erg. Schutzkleidung (400x490x220)",
-              "unsicher": true
+              "unsicher": true,
+              "position": "mitte"
             },
             {
               "menge": 2,
-              "name": "Halbmaske MSA"
+              "name": "Halbmaske MSA",
+              "position": "mitte"
             },
             {
               "menge": 3,
               "name": "Pack Ohrstöpsel",
-              "unsicher": true
+              "unsicher": true,
+              "position": "mitte"
             },
             {
               "menge": 8,
               "name": "Chemikalien-Einsatzanzug",
-              "unsicher": true
+              "unsicher": true,
+              "position": "unten"
             },
             {
               "menge": 9,
-              "name": "Kombifilter"
+              "name": "Kombifilter",
+              "position": "unten"
             },
             {
               "menge": 3,
-              "name": "Schutzbrillen"
+              "name": "Schutzbrillen",
+              "position": "unten"
             }
           ]
         }
@@ -381,19 +456,23 @@
           "gegenstaende": [
             {
               "menge": 2,
-              "name": "Druckschlauch B-20"
+              "name": "Druckschlauch B-20",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Verteiler B-CBC"
+              "name": "Verteiler B-CBC",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Übergangsstück B-C"
+              "name": "Übergangsstück B-C",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Kupplungsschlüssel ABC"
+              "name": "Kupplungsschlüssel ABC",
+              "position": "unten"
             }
           ]
         },
@@ -403,29 +482,35 @@
             {
               "menge": 4,
               "name": "Schlauchtragekorb mit Druckschlauch C-15",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 4,
-              "name": "Seilschlauchhalter"
+              "name": "Seilschlauchhalter",
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Schlauchpaket",
-              "unsicher": true
+              "unsicher": true,
+              "position": "mitte"
             },
             {
               "menge": 2,
-              "name": "Druckschlauch C-30"
+              "name": "Druckschlauch C-30",
+              "position": "mitte"
             },
             {
               "menge": 2,
               "name": "Schlauchabsperrung C",
-              "unsicher": true
+              "unsicher": true,
+              "position": "unten"
             },
             {
               "menge": 6,
-              "name": "Druckschlauch B-20"
+              "name": "Druckschlauch B-20",
+              "position": "unten"
             }
           ]
         }
@@ -440,19 +525,23 @@
           "gegenstaende": [
             {
               "menge": 2,
-              "name": "Druckschlauch B-20"
+              "name": "Druckschlauch B-20",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Verteiler B-CBC"
+              "name": "Verteiler B-CBC",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Kupplungsschlüssel B-C"
+              "name": "Kupplungsschlüssel B-C",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Übergangsstück C-D"
+              "name": "Übergangsstück C-D",
+              "position": "unten"
             }
           ]
         },
@@ -461,68 +550,84 @@
           "gegenstaende": [
             {
               "menge": 1,
-              "name": "Wanne für Schnellangriff"
+              "name": "Wanne für Schnellangriff",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Druckschlauch C-30"
+              "name": "Druckschlauch C-30",
+              "position": "oben"
             },
             {
               "menge": 1,
               "name": "Kiste Grobreinigung",
-              "unsicher": true
+              "unsicher": true,
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Auszug Kleinlöschgerät"
+              "name": "Auszug Kleinlöschgerät",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Kübelspritze A10"
+              "name": "Kübelspritze A10",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Feuerlöscher CO2"
+              "name": "Feuerlöscher CO2",
+              "position": "oben"
             },
             {
               "menge": 1,
-              "name": "Feuerlöscher PG6"
+              "name": "Feuerlöscher PG6",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Kombischaumrohr S4/M4"
+              "name": "Kombischaumrohr S4/M4",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Ansaugschlauch 2D"
+              "name": "Ansaugschlauch 2D",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Löschdecke"
+              "name": "Löschdecke",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Auszug Schaum"
+              "name": "Auszug Schaum",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Mehrzweckstrahlrohr BM"
+              "name": "Mehrzweckstrahlrohr BM",
+              "position": "mitte"
             },
             {
               "menge": 1,
-              "name": "Stützkrümmer"
+              "name": "Stützkrümmer",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Zumischer Z4"
+              "name": "Zumischer Z4",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Rauchverschluss Standard"
+              "name": "Rauchverschluss Standard",
+              "position": "unten"
             },
             {
               "menge": 1,
-              "name": "Rauchverschluss Doppeltür"
+              "name": "Rauchverschluss Doppeltür",
+              "position": "unten"
             }
           ]
         }
@@ -830,60 +935,63 @@
       ]
     },
     {
-      "id": "heckbeladung-schublade",
-      "name": "Heckbeladung – Schublade",
-      "gegenstaende": [
+      "id": "heck",
+      "name": "Heck",
+      "bereiche": [
         {
-          "menge": 1,
-          "name": "Druckschlauch B-5"
+          "bereich": "Schublade",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Druckschlauch B-5"
+            },
+            {
+              "menge": 1,
+              "name": "Druckschlauch B-10"
+            },
+            {
+              "menge": 1,
+              "name": "Saugschutzkorb A"
+            },
+            {
+              "menge": 1,
+              "name": "Sammelstück"
+            },
+            {
+              "menge": 2,
+              "name": "Mehrzweckleine"
+            },
+            {
+              "menge": 1,
+              "name": "Kupplungsschlüssel ABC"
+            },
+            {
+              "menge": 4,
+              "name": "Hebelschlauchbinde"
+            }
+          ]
         },
         {
-          "menge": 1,
-          "name": "Druckschlauch B-10"
+          "bereich": "Zusatzfach rechts",
+          "gegenstaende": [
+            {
+              "menge": 2,
+              "name": "Unterlegkeil"
+            },
+            {
+              "menge": 1,
+              "name": "Rundschlinge"
+            }
+          ]
         },
         {
-          "menge": 1,
-          "name": "Saugschutzkorb A"
-        },
-        {
-          "menge": 1,
-          "name": "Sammelstück"
-        },
-        {
-          "menge": 2,
-          "name": "Mehrzweckleine"
-        },
-        {
-          "menge": 1,
-          "name": "Kupplungsschlüssel ABC"
-        },
-        {
-          "menge": 4,
-          "name": "Hebelschlauchbinde"
-        }
-      ]
-    },
-    {
-      "id": "heckbeladung-zusatzfach",
-      "name": "Heckbeladung – Zusatzfach rechts",
-      "gegenstaende": [
-        {
-          "menge": 2,
-          "name": "Unterlegkeil"
-        },
-        {
-          "menge": 1,
-          "name": "Rundschlinge"
-        }
-      ]
-    },
-    {
-      "id": "heckbeladung-unterfahrschutz",
-      "name": "Heckbeladung – Unterfahrschutz",
-      "gegenstaende": [
-        {
-          "menge": 1,
-          "name": "Abgasschlauch Fahrzeug"
+          "bereich": "Unterfahrschutz",
+          "gegenstaende": [
+            {
+              "menge": 1,
+              "name": "Abgasschlauch Fahrzeug"
+            }
+          ]
         }
       ]
     }
