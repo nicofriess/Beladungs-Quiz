@@ -172,8 +172,7 @@
             },
             {
               "menge": 1,
-              "name": "Schadstoffdeckung",
-              "unsicher": true,
+              "name": "Schachtabdeckung",
               "position": "mitte"
             },
             {
