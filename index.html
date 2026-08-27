@@ -781,8 +781,7 @@ const BELADEPLAN_LF10 = {
             },
             {
               "menge": 1,
-              "name": "Schadstoffdeckung",
-              "unsicher": true,
+              "name": "Schachtabdeckung",
               "position": "mitte"
             },
             {
@@ -1752,6 +1751,131 @@ const BELADEPLAN_LF10 = {
     });
   });
 
+  // ---------- Detailfotos einzelner Geräteräume (präzise Rot-Kreis-Markierung) ----------
+  // Zusätzlich zu den Fahrzeugseiten-Fotos (SCENES) gibt es Nahaufnahmen einzelner
+  // Geräteräume, auf denen die Fächer einzeln beschriftet sind. "punkte" ordnet jedem
+  // Gegenstandsnamen die ungefähre Position (Prozent, per Auge an den Beschriftungen
+  // kalibriert) auf GENAU DIESEM Foto zu. Manche Räume haben mehrere Detailfotos
+  // (z.B. Hauptfach + Auszug) - dann wird das Foto genommen, dessen Punkte-Liste den
+  // gesuchten Namen enthält. Nicht jeder Gegenstand ist einem Fach eindeutig zuordenbar
+  // (z.B. mehrfach vergebene oder nicht lesbare Beschriftungen) - für nicht erfasste
+  // Namen greift der bisherige, gröbere revealRect-Fallback auf dem Fahrzeugseiten-Foto.
+  var DETAIL_PHOTOS = {
+    raum1: [
+      { src: 'assets/raum1-detail.jpg', punkte: {
+        'Unterflurhydrantenschlüssel BW': [31, 16],
+        'Kasten permanente Stromversorgung': [70, 15],
+        'Handwerkzeug': [68, 29],
+        'Überflurhydrantenschlüssel': [44, 28],
+        'Standrohrhalter': [44, 39],
+        'Zubehörtasche PAX Spineboard': [53, 39],
+        'Paar Schachthaken': [61, 39],
+        'Stab-Fast': [67, 39],
+        'Zubehör Rettungsgerät': [85, 39],
+        'Standrohr BW': [16, 53],
+        'Schaufeltrage mit Kopf-Fixier-Set': [26, 53],
+        'Korbtrage mit Fahrwerk': [34, 53],
+        'Abseilspinne': [49, 53],
+        'Verkehrsunfallsatz': [60, 53],
+        'Standrohr': [68, 53],
+        'Leitungsroller 230V': [81, 53],
+        'Spreizer Weber': [48, 75],
+        'Schneidgerät Weber': [30, 70],
+        'Stab-Pack': [43, 82]
+      } }
+    ],
+    raum2: [
+      { src: 'assets/raum2-hauptfach.jpg', punkte: {
+        'Verkehrsleitkegel': [43, 42],
+        'Waldarbeiter-Latzhose': [73, 42],
+        'Waldarbeiter-Schutzhelm': [73, 42],
+        'Schachtabdeckung': [49, 64],
+        'Unterlegplane': [49, 64],
+        'Notfallwanne': [49, 64],
+        'Absperrband': [17, 86],
+        'Motorsäge mit Zubehör': [52, 87]
+      } },
+      { src: 'assets/raum2-drehauszug-vorne.jpg', punkte: {
+        'Bolzenschneider': [21, 58],
+        'Feuerwehraxt': [38, 58],
+        'Spaltaxt': [48, 58],
+        'Halligan-Tool': [52, 58],
+        'Euro-Blitz LED': [77, 32],
+        'Doppelkanister': [65, 51],
+        'Stromerzeuger 9 kVA': [42, 70],
+        'Stativ': [76, 73],
+        'Beleuchtungseinheit mit Zubehör Weber LED': [76, 73]
+      } },
+      { src: 'assets/raum2-drehauszug-innen.jpg', punkte: {
+        'Schornsteinkehrzeug': [49, 19],
+        'Akku-Bohrschrauber': [75, 19],
+        'Akku-Säbelsäge': [52, 41],
+        'Kiste 18V-Akkus (600x400x220)': [58, 56],
+        'Akku-Geradschleifer': [59, 73],
+        'Sperrwerkzeug': [59, 73]
+      } }
+    ],
+    raum3: [
+      { src: 'assets/raum3-detail.jpg', punkte: {
+        'Zubehör Wassersauger': [17, 32],
+        'Kasten Tauchpumpe mit Zubehör': [66, 32],
+        'Wassersauger Kärcher': [21, 58],
+        'Sprungpolster SP16': [68, 52]
+      } }
+    ],
+    raum4: [
+      { src: 'assets/raum4-detail.jpg', punkte: {
+        'Kiste Trainingsanzüge (400x490x220)': [71, 25],
+        'Chemikalien-Einsatzanzug': [71, 41],
+        'Halbmaske MSA': [84, 54],
+        'Kombifilter': [84, 54],
+        'Pack Ohrstöpsel': [84, 54],
+        'Lüfter Leader ESV': [24, 73],
+        'Akkulüfter Ramfan': [59, 73]
+      } }
+    ],
+    raum5: [
+      { src: 'assets/raum5-detail.jpg', punkte: {
+        'Schlauchpaket': [49, 40],
+        'Seilschlauchhalter': [84, 75],
+        'Verteiler B-CBC': [36, 95],
+        'Druckschlauch B-20': [44, 95],
+        'Kupplungsschlüssel ABC': [84, 78]
+      } }
+    ],
+    raum6: [
+      { src: 'assets/raum6-hauptfach.jpg', punkte: {
+        'Kiste Grobreinigung': [41, 22],
+        'Löschdecke': [48, 22],
+        'Zumischer Z4': [78, 12],
+        'Wanne für Schnellangriff': [34, 75],
+        'Kupplungsschlüssel B-C': [24, 93],
+        'Rauchverschluss Doppeltür': [30, 64],
+        'Mehrzweckstrahlrohr BM': [59, 64],
+        'Stützkrümmer': [70, 64],
+        'Rauchverschluss Standard': [79, 64]
+      } },
+      { src: 'assets/raum6-auszug.jpg', punkte: {
+        'Ansaugschlauch 2D': [56, 22],
+        'Feuerlöscher CO2': [50, 45],
+        'Kübelspritze A10': [33, 45],
+        'Auszug Schaum': [44, 80],
+        'Verteiler B-CBC': [59, 96],
+        'Druckschlauch B-20': [70, 96]
+      } }
+    ]
+  };
+
+  function findDetailPoint(zoneId, name) {
+    var photos = DETAIL_PHOTOS[zoneId];
+    if (!photos) return null;
+    for (var i = 0; i < photos.length; i++) {
+      var p = photos[i].punkte[name];
+      if (p) return { src: photos[i].src, point: p };
+    }
+    return null;
+  }
+
   var CARD_ZONES = [
     { id: 'fahrerraum', label: 'Fahrerraum' },
     { id: 'dachbeladung', label: 'Dachbeladung' },
@@ -2093,17 +2217,34 @@ const BELADEPLAN_LF10 = {
   // und die ungefähre Position (oben/mitte/unten laut Beladeplan-Reihenfolge) rot eingekreist.
   function showReveal() {
     var loc = resolvedLocation || { zoneId: currentItem.zoneId, bereich: currentItem.bereich };
+    var wrap = stageEl.querySelector('.photo-scene');
+    if (!wrap) return;
+    var imgEl = wrap.querySelector('img');
+    // Die Dropzonen-Rahmen/Labels sind für das geschlossene Foto kalibriert und
+    // passen nicht zum offenen/Detail-Foto - beim Reveal ausblenden, bis die nächste Runde startet.
+    wrap.querySelectorAll('.drop-zone').forEach(function (dz) { dz.style.display = 'none'; });
+
+    // Bevorzugt: präzises Detailfoto des Geräteraums mit Punktmarkierung genau am Gegenstand.
+    var detail = findDetailPoint(loc.zoneId, currentItem.name);
+    if (detail) {
+      imgEl.src = detail.src;
+      var dcw = 11, dch = dcw * 0.75; // Detailfotos sind alle im Hochformat 3:4 - so bleibt der Kreis rund.
+      var circleD = document.createElement('div');
+      circleD.className = 'reveal-circle';
+      circleD.style.left = (detail.point[0] - dcw / 2) + '%';
+      circleD.style.top = (detail.point[1] - dch / 2) + '%';
+      circleD.style.width = dcw + '%';
+      circleD.style.height = dch + '%';
+      wrap.appendChild(circleD);
+      return;
+    }
+
+    // Fallback: grobe Zonen-Markierung auf dem Fahrzeugseiten-Foto (wie bisher).
     var scene = SCENES.filter(function (s) { return s.id === activeSceneId; })[0];
     if (!scene || !scene.imgOpen) return;
     var zone = scene.zones.filter(function (z) { return z.id === loc.zoneId; })[0];
     if (!zone || !zone.revealRect) return;
-    var wrap = stageEl.querySelector('.photo-scene');
-    if (!wrap) return;
-    var imgEl = wrap.querySelector('img');
     imgEl.src = scene.imgOpen;
-    // Die Dropzonen-Rahmen/Labels sind für das geschlossene Foto kalibriert und
-    // passen nicht zum offenen Foto - beim Reveal ausblenden, bis die nächste Runde startet.
-    wrap.querySelectorAll('.drop-zone').forEach(function (dz) { dz.style.display = 'none'; });
     var r = zone.revealRect;
     var frac = currentItem.position === 'oben' ? 0.22 : currentItem.position === 'unten' ? 0.78 : 0.5;
     var cx = r[0] + r[2] / 2;
